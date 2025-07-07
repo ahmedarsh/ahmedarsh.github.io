@@ -1,6 +1,96 @@
 [
   {
     "id": 1,
+    "title": "Bus Mania - Car Parking Jam",
+    "category": "Mobile",
+    "image": "./assets/images/busMania.png",
+    "alt": "Bus Mania - Car Parking Jam",
+    "link": "https://play.google.com/store/apps/details?id=com.together.CrazyBus&hl=en_AU",
+    "description": "A challenging parking puzzle game where players navigate through colorful parking lots, solve puzzles, and ensure every passenger gets to their matching ride. Features unique gameplay mechanics and brain-teasing challenges."
+  },
+  {
+    "id": 2,
+    "title": "Idle Construction 3D",
+    "category": "Mobile",
+    "image": "./assets/images/construction.png",
+    "alt": "Idle Construction 3D",
+    "link": "https://apps.apple.com/us/app/idle-construction-3d/id1473951944",
+    "description": "3D construction simulation game with idle mechanics and progression systems. Players build and manage construction projects with realistic 3D graphics and engaging gameplay."
+  },
+  {
+    "id": 3,
+    "title": "Dive Fever",
+    "category": "Mobile",
+    "image": "./assets/images/dive.png",
+    "alt": "Dive Fever",
+    "link": "https://play.google.com/store/apps/details?id=com.together.DiveFever",
+    "description": "Fish & Sushi Time! Explore the sea, catch clown fishes, sharks, and even narwhals! Make them into sushi and sell to hungry customers. Earn lots of money and become the most successful billionaire!"
+  },
+  {
+    "id": 4,
+    "title": "Mini Chef",
+    "category": "Mobile",
+    "image": "./assets/images/sushi.png",
+    "alt": "Mini Chef",
+    "link": "https://play.google.com/store/apps/details?id=com.together.MiniChef&hl=en_AU",
+    "description": "Have the most satisfying cooking animation. Manage the pocket kitchen, and earn lots of money with your mini chefs! Features smooth animations and engaging cooking mechanics."
+  },
+  {
+    "id": 5,
+    "title": "Screw Mania - Tool Box Jam",
+    "category": "Mobile",
+    "image": "./assets/images/screw.png",
+    "alt": "Screw Mania - Tool Box Jam",
+    "link": "http://play.google.com/store/apps/details?id=com.together.ScrewManiaGP&hl=en",
+    "description": "A puzzle game where players solve tool box jams by strategically moving screws and tools. Features challenging puzzles and satisfying mechanics."
+  },
+  {
+    "id": 6,
+    "title": "Dragon Match 3D",
+    "category": "Mobile",
+    "image": "./assets/images/dragon.png",
+    "alt": "Dragon Match 3D",
+    "link": "https://apps.apple.com/au/app/dragon-match-3d/id6502593603",
+    "description": "3D matching puzzle game with dragon-themed graphics and engaging gameplay mechanics. Features stunning visuals and challenging levels."
+  },
+  {
+    "id": 7,
+    "title": "Blobby Rush",
+    "category": "Mobile",
+    "image": "./assets/images/blobly.png",
+    "alt": "Blobby Rush",
+    "link": "https://apps.apple.com/us/app/blobby-rush/id1592305740",
+    "description": "Created realistic Jelly simulation for the Blobby Rush game with advanced physics and fluid dynamics. Features unique blob mechanics and smooth animations."
+  },
+  {
+    "id": 8,
+    "title": "Pearl Rush",
+    "category": "Mobile",
+    "image": "./assets/images/pearl.png",
+    "alt": "Pearl Rush",
+    "link": "https://apps.apple.com/us/app/pearl-rush/id1579854104",
+    "description": "Exciting pearl collection game with beautiful underwater graphics and engaging gameplay mechanics. Features smooth controls and challenging levels."
+  },
+  {
+    "id": 9,
+    "title": "Stuffed Toy 3D",
+    "category": "Mobile",
+    "image": "./assets/images/stuffed.png",
+    "alt": "Stuffed Toy 3D",
+    "link": "https://apps.apple.com/us/app/stuffed-toy-3d/id1509452305",
+    "description": "3D stuffed toy simulation game with realistic physics and engaging gameplay. Features beautiful graphics and satisfying toy interactions."
+  },
+  {
+    "id": 10,
+    "title": "Idle Home Makeover",
+    "category": "Mobile",
+    "image": "./assets/images/home.png",
+    "alt": "Idle Home Makeover",
+    "link": "https://apps.apple.com/us/app/idle-home-makeover/id1510732870",
+    "description": "Idle home renovation game where players transform houses with beautiful makeovers. Features progression systems and satisfying renovation mechanics."
+  },
+  {
+    "id": 11,
     "title": "Sentiment-Driven NPC Interaction System",
     "category": "AI/ML",
     "image": "./assets/images/project-1.jpg",
@@ -8,15 +98,7 @@
     "description": "Dynamic NPC interaction system for Unity-based games using NLP for sentiment analysis, speech synthesis, and Reinforcement Learning to adapt NPC behavior based on player interactions."
   },
   {
-    "id": 2,
-    "title": "Blobby Rush - Jelly Simulation",
-    "category": "Mobile Casual",
-    "image": "./assets/images/project-2.png",
-    "alt": "Blobby Rush Game",
-    "description": "Created realistic Jelly simulation for the Blobby Rush game with advanced physics and fluid dynamics."
-  },
-  {
-    "id": 3,
+    "id": 12,
     "title": "Dragon Car Challenge",
     "category": "Mobile Casual",
     "image": "./assets/images/project-3.jpg",
@@ -24,7 +106,7 @@
     "description": "Designed Car Controller system with bezier paths for smooth vehicle movement and challenging gameplay mechanics."
   },
   {
-    "id": 4,
+    "id": 13,
     "title": "Base Runner Controller",
     "category": "Mobile Casual",
     "image": "./assets/images/project-4.png",
@@ -32,15 +114,7 @@
     "description": "Implemented versatile Base Runner Controller with stacking movements and advanced character control systems."
   },
   {
-    "id": 5,
-    "title": "Idle Construction 3D",
-    "category": "Mobile Casual",
-    "image": "./assets/images/project-5.png",
-    "alt": "Idle Construction 3D",
-    "description": "Developed 3D construction simulation game with idle mechanics and progression systems."
-  },
-  {
-    "id": 6,
+    "id": 14,
     "title": "Strategy Game Module",
     "category": "Mobile Casual",
     "image": "./assets/images/project-6.png",
@@ -48,7 +122,7 @@
     "description": "Created comprehensive module for strategy games with AI opponents and complex decision-making systems."
   },
   {
-    "id": 7,
+    "id": 15,
     "title": "Multiplayer Game Development",
     "category": "Mobile Casual",
     "image": "./assets/images/project-7.png",
@@ -56,7 +130,7 @@
     "description": "Developed multiplayer games using Photon networking system with real-time synchronization and player interactions."
   },
   {
-    "id": 8,
+    "id": 16,
     "title": "AR/VR Experiences",
     "category": "Mobile Casual",
     "image": "./assets/images/project-8.jpg",
@@ -64,7 +138,7 @@
     "description": "Created immersive augmented reality experiences using Unity3D and Unreal Engine for mobile platforms."
   },
   {
-    "id": 9,
+    "id": 17,
     "title": "Playable Ads Optimization",
     "category": "Mobile Casual",
     "image": "./assets/images/project-9.png",
@@ -72,34 +146,34 @@
     "description": "Optimized playable ads for maximum speed and performance across modern mobile devices with advanced compression techniques."
   },
   {
-    "id": 10,
+    "id": 18,
     "title": "AI NPC Demo",
-    "category": "GameVideos",
+    "category": "Videos",
     "type": "video",
     "video": "./assets/videos/CubeSurfer.mp4",
     "alt": "AI NPC Interaction Demo",
     "description": "Demonstration of emotionally responsive NPCs using sentiment analysis and speech synthesis."
   },
   {
-    "id": 11,
+    "id": 19,
     "title": "Game Development Showcase",
-    "category": "GameVideos",
+    "category": "Videos",
     "type": "video",
     "video": "./assets/videos/Hunter'sJungle%20Path.mp4",
     "alt": "Game Development Showcase",
     "description": "Showcase of various mobile games developed using Unity3D and Unreal Engine."
   },
   {
-    "id": 12,
+    "id": 20,
     "title": "Performance Optimization Demo",
-    "category": "GameVideos",
+    "category": "Videos",
     "type": "video",
     "video": "./assets/videos/PrisonEscape.mp4",
     "alt": "Performance Optimization Demo",
     "description": "Demonstration of game performance optimization techniques and profiling tools."
   },
   {
-    "id": 13,
+    "id": 21,
     "title": "SDK Development",
     "category": "Mobile Casual",
     "image": "./assets/images/idle-bank.jpg",
@@ -107,7 +181,7 @@
     "description": "Developed SDKs for backend-as-a-service, streamlining integration processes for new game features."
   },
   {
-    "id": 14,
+    "id": 22,
     "title": "Machine Learning Integration",
     "category": "AI/ML",
     "image": "./assets/images/figurine-art.jpg",
@@ -115,7 +189,7 @@
     "description": "Integrated machine learning models for dynamic game content generation and player behavior analysis."
   },
   {
-    "id": 15,
+    "id": 23,
     "title": "Cross-Platform Development",
     "category": "Mobile Casual",
     "image": "./assets/images/sneaker-art.jpg",
@@ -123,7 +197,7 @@
     "description": "Developed games for multiple platforms including iOS, Android, and console systems with optimized performance."
   },
   {
-    "id": 16,
+    "id": 24,
     "title": "Team Leadership Projects",
     "category": "Mobile Casual",
     "image": "./assets/images/web-master.jpg",
