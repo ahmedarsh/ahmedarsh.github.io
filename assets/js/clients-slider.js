@@ -1,77 +1,30 @@
 document.addEventListener("DOMContentLoaded", function () {
+  const clientsSection = document.querySelector(".clients");
   const clientsList = document.querySelector(".clients-list");
-  if (!clientsList) return;
+  if (!clientsList || !clientsSection) return;
 
-  let scrollAmount = 0;
-  const scrollSpeed = 0.5; // Reduced speed for smoother movement
-  const scrollPause = 3000; // 3 seconds pause at each end
-  let isPaused = false;
-  let scrollDirection = 1;
-  let pauseTimeout;
-  let animationFrameId;
+  // Create navigation buttons
+  const leftBtn = document.createElement("button");
+  leftBtn.innerHTML = '<ion-icon name="chevron-back-outline"></ion-icon>';
+  leftBtn.className = "clients-nav-btn left";
+  leftBtn.setAttribute("aria-label", "Scroll left");
 
-  function smoothScroll(targetScroll) {
-    const currentScroll = clientsList.scrollLeft;
-    const difference = targetScroll - currentScroll;
-    const step = difference * 0.05; // Smooth interpolation factor
+  const rightBtn = document.createElement("button");
+  rightBtn.innerHTML = '<ion-icon name="chevron-forward-outline"></ion-icon>';
+  rightBtn.className = "clients-nav-btn right";
+  rightBtn.setAttribute("aria-label", "Scroll right");
 
-    if (Math.abs(difference) > 1) {
-      clientsList.scrollLeft = currentScroll + step;
-      requestAnimationFrame(() => smoothScroll(targetScroll));
-    } else {
-      clientsList.scrollLeft = targetScroll;
-    }
-  }
+  // Insert buttons before and after the list
+  clientsSection.insertBefore(leftBtn, clientsList);
+  clientsSection.insertBefore(rightBtn, clientsList.nextSibling);
 
-  function autoScroll() {
-    if (isPaused) {
-      animationFrameId = requestAnimationFrame(autoScroll);
-      return;
-    }
+  // Scroll amount per click
+  const scrollStep = 200;
 
-    scrollAmount += scrollSpeed * scrollDirection;
-
-    // Calculate the maximum scroll position
-    const maxScroll = clientsList.scrollWidth - clientsList.clientWidth;
-
-    // Check if we've reached the end
-    if (scrollAmount >= maxScroll) {
-      isPaused = true;
-      clearTimeout(pauseTimeout);
-      pauseTimeout = setTimeout(() => {
-        scrollDirection = -1;
-        isPaused = false;
-      }, scrollPause);
-    }
-    // Check if we've reached the start
-    else if (scrollAmount <= 0) {
-      isPaused = true;
-      clearTimeout(pauseTimeout);
-      pauseTimeout = setTimeout(() => {
-        scrollDirection = 1;
-        isPaused = false;
-      }, scrollPause);
-    }
-
-    smoothScroll(scrollAmount);
-    animationFrameId = requestAnimationFrame(autoScroll);
-  }
-
-  // Start auto-scrolling
-  autoScroll();
-
-  // Pause on hover
-  clientsList.addEventListener("mouseenter", () => {
-    isPaused = true;
+  leftBtn.addEventListener("click", function () {
+    clientsList.scrollBy({ left: -scrollStep, behavior: "smooth" });
   });
-
-  clientsList.addEventListener("mouseleave", () => {
-    isPaused = false;
+  rightBtn.addEventListener("click", function () {
+    clientsList.scrollBy({ left: scrollStep, behavior: "smooth" });
   });
-
-  // Cleanup on page change/unmount
-  return () => {
-    cancelAnimationFrame(animationFrameId);
-    clearTimeout(pauseTimeout);
-  };
 });

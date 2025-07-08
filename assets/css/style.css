@@ -30,13 +30,13 @@
     hsl(240, 2%, 13%);
   --bg-gradient-yellow-1: linear-gradient(
     to bottom right,
-    hsl(45, 100%, 71%) 0%,
-    hsla(36, 100%, 69%, 0) 50%
+    #00D7FD 0%,
+    hsla(192, 100%, 50%, 0) 50%
   );
   --bg-gradient-yellow-2: linear-gradient(
       135deg,
-      hsla(45, 100%, 71%, 0.251) 0%,
-      hsla(35, 100%, 68%, 0) 59.86%
+      rgba(0,215,253,0.251) 0%,
+      rgba(0,215,253,0) 59.86%
     ),
     hsl(240, 2%, 13%);
   --border-gradient-onyx: linear-gradient(
@@ -46,8 +46,8 @@
   );
   --text-gradient-yellow: linear-gradient(
     to right,
-    hsl(45, 100%, 72%),
-    hsl(35, 100%, 68%)
+    #00D7FD,
+    #00D7FD
   );
 
   /* solid */
@@ -59,8 +59,8 @@
   --smoky-black: hsl(0, 0%, 7%);
   --white-1: hsl(0, 0%, 100%);
   --white-2: hsl(0, 0%, 98%);
-  --orange-yellow-crayola: hsl(45, 100%, 72%);
-  --vegas-gold: hsl(45, 54%, 58%);
+  --orange-yellow-crayola: #00D7FD;
+  --vegas-gold: #00D7FD;
   --light-gray: hsl(0, 0%, 84%);
   --light-gray-70: hsla(0, 0%, 84%, 0.7);
   --bittersweet-shimmer: hsl(0, 43%, 51%);
@@ -1384,7 +1384,7 @@ main {
   margin: 20px 0;
   font-style: italic;
   color: var(--vegas-gold);
-  background: rgba(255, 193, 7, 0.1);
+  background: rgba(0,215,253,0.1);
   padding: 15px 20px;
   border-radius: 8px;
 }
@@ -1449,10 +1449,10 @@ main {
   color: var(--orange-yellow-crayola);
   font-size: var(--fs-6);
   font-weight: var(--fw-500);
-  background: rgba(255, 193, 7, 0.1);
+  background: rgba(0,215,253,0.1);
   padding: 4px 12px;
   border-radius: 20px;
-  border: 1px solid rgba(255, 193, 7, 0.3);
+  border: 1px solid rgba(0,215,253,0.3);
 }
 
 .blog-item-title {
@@ -2717,4 +2717,39 @@ textarea.form-input::-webkit-resizer {
 }
 .portfolio-modal-container.active {
   display: flex !important;
+}
+
+.clients-nav-btn {
+  background: var(--eerie-black-2);
+  border: 1px solid var(--jet);
+  color: var(--orange-yellow-crayola);
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  cursor: pointer;
+  margin: 0 8px;
+  transition: background 0.2s, color 0.2s;
+  position: relative;
+  z-index: 2;
+}
+.clients-nav-btn:hover {
+  background: var(--orange-yellow-crayola);
+  color: var(--eerie-black-2);
+}
+.clients-nav-btn.left {
+  float: left;
+}
+.clients-nav-btn.right {
+  float: right;
+}
+.clients {
+  display: flex;
+  align-items: center;
+}
+.clients-list {
+  flex: 1 1 auto;
 }
