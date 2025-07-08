@@ -345,7 +345,29 @@ const displayProjects = function () {
   console.log("Projects to show on this page:", projectsToShow.length);
 
   // Create and append project items
-  projectsToShow.forEach((project) => {
+  let projectsToShowOrdered = projectsToShow;
+  // If 'All' filter is active, reorder by category: AAA Titles, Mobile, AI/ML, Videos
+  let isAllFilter = false;
+  // Check both select and button for 'All' filter
+  const selectValue = document.querySelector('.select-value');
+  if (selectValue && selectValue.textContent.trim() === 'All') {
+    isAllFilter = true;
+  } else {
+    // Check if the All button is active
+    const allBtn = Array.from(document.querySelectorAll('[data-filter-btn]')).find(btn => btn.textContent.trim() === 'All');
+    if (allBtn && allBtn.classList.contains('active')) {
+      isAllFilter = true;
+    }
+  }
+  if (isAllFilter) {
+    const categoryOrder = ['AAA Titles', 'Mobile', 'AI/ML', 'Videos'];
+    projectsToShowOrdered = projectsToShow.slice().sort((a, b) => {
+      const aIdx = categoryOrder.indexOf(a.category);
+      const bIdx = categoryOrder.indexOf(b.category);
+      return (aIdx === -1 ? 99 : aIdx) - (bIdx === -1 ? 99 : bIdx);
+    });
+  }
+  projectsToShowOrdered.forEach((project) => {
     const projectItem = document.createElement("li");
     projectItem.className = "project-item active";
     projectItem.setAttribute("data-filter-item", "");
