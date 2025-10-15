@@ -430,16 +430,19 @@ main {
   gap: 16px;
 }
 
-.contact-item {
-  min-width: 100%;
-  display: flex;
-  align-items: center;
-  gap: 16px;
-}
+  .contact-item {
+    min-width: 100%;
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    overflow-x: visible;
+  }
 
 .contact-info {
   max-width: calc(100% - 46px);
   width: calc(100% - 46px);
+  min-width: 0;
+  overflow-x: visible;
 }
 
 .contact-title {
@@ -452,6 +455,7 @@ main {
 .contact-info :is(.contact-link, time, address) {
   color: var(--white-2);
   font-size: var(--fs-7);
+  white-space: nowrap;
 }
 
 .contact-info address {
@@ -1750,8 +1754,10 @@ textarea.form-input::-webkit-resizer {
   }
 
   .contact-info {
-    max-width: calc(100% - 64px);
-    width: calc(100% - 64px);
+    max-width: calc(100% - 70px);
+    width: calc(100% - 70px);
+    min-width: 0;
+    overflow-x: visible;
   }
 
   /**
@@ -1990,7 +1996,7 @@ textarea.form-input::-webkit-resizer {
 
   .sidebar,
   article {
-    width: 700px;
+    width: 850px;
   }
 
   .has-scrollbar::-webkit-scrollbar-button {
@@ -2318,8 +2324,8 @@ textarea.form-input::-webkit-resizer {
 
   .contact-info :is(.contact-link) {
     white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
+    overflow: visible;
+    text-overflow: unset;
   }
 
   .contact-info :is(.contact-link, time, address) {

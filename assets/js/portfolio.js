@@ -308,8 +308,13 @@ const loadPortfolioProjects = function () {
       return;
     }
 
-    // Store all projects
-    filteredProjects = portfolioData;
+    // Store all projects and sort by priority (AAA Titles first)
+    const categoryOrder = ['AAA Titles', 'Mobile', 'AI/ML', 'Videos'];
+    filteredProjects = portfolioData.slice().sort((a, b) => {
+      const aIdx = categoryOrder.indexOf(a.category);
+      const bIdx = categoryOrder.indexOf(b.category);
+      return (aIdx === -1 ? 99 : aIdx) - (bIdx === -1 ? 99 : bIdx);
+    });
 
     // Display first page
     displayProjects();
@@ -344,29 +349,8 @@ const displayProjects = function () {
   const projectsToShow = filteredProjects.slice(startIndex, endIndex);
   console.log("Projects to show on this page:", projectsToShow.length);
 
-  // Create and append project items
+  // Create and append project items (projects are already sorted in filteredProjects)
   let projectsToShowOrdered = projectsToShow;
-  // If 'All' filter is active, reorder by category: AAA Titles, Mobile, AI/ML, Videos
-  let isAllFilter = false;
-  // Check both select and button for 'All' filter
-  const selectValue = document.querySelector('.select-value');
-  if (selectValue && selectValue.textContent.trim() === 'All') {
-    isAllFilter = true;
-  } else {
-    // Check if the All button is active
-    const allBtn = Array.from(document.querySelectorAll('[data-filter-btn]')).find(btn => btn.textContent.trim() === 'All');
-    if (allBtn && allBtn.classList.contains('active')) {
-      isAllFilter = true;
-    }
-  }
-  if (isAllFilter) {
-    const categoryOrder = ['AAA Titles', 'Mobile', 'AI/ML', 'Videos'];
-    projectsToShowOrdered = projectsToShow.slice().sort((a, b) => {
-      const aIdx = categoryOrder.indexOf(a.category);
-      const bIdx = categoryOrder.indexOf(b.category);
-      return (aIdx === -1 ? 99 : aIdx) - (bIdx === -1 ? 99 : bIdx);
-    });
-  }
   projectsToShowOrdered.forEach((project) => {
     const projectItem = document.createElement("li");
     projectItem.className = "project-item active";
@@ -623,13 +607,22 @@ const initializeFilters = function (projects) {
     currentPage = 1;
 
     // Filter projects based on selected category
+    let filtered;
     if (selectedValue === "All") {
-      filteredProjects = projects;
+      filtered = projects;
     } else {
-      filteredProjects = projects.filter((project) =>
+      filtered = projects.filter((project) =>
         project.category.includes(selectedValue)
       );
     }
+
+    // Sort filtered projects by priority (AAA Titles first)
+    const categoryOrder = ['AAA Titles', 'Mobile', 'AI/ML', 'Videos'];
+    filteredProjects = filtered.slice().sort((a, b) => {
+      const aIdx = categoryOrder.indexOf(a.category);
+      const bIdx = categoryOrder.indexOf(b.category);
+      return (aIdx === -1 ? 99 : aIdx) - (bIdx === -1 ? 99 : bIdx);
+    });
 
     // Update display and pagination
     displayProjects();
