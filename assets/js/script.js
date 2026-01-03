@@ -135,5 +135,147 @@ for (let i = 0; i < navigationLinks.length; i++) {
         navigationLinks[i].classList.remove("active");
       }
     }
+    // Re-initialize animations after page change
+    setTimeout(() => {
+      initAnimations();
+    }, 300);
   });
 }
+
+//-----------------------------------*\
+// INTERACTION FEEDBACK & ANIMATIONS
+//-----------------------------------*\
+
+// Scroll-triggered animations using Intersection Observer
+function initScrollAnimations() {
+  const observerOptions = {
+    threshold: 0.1,
+    rootMargin: '0px 0px -50px 0px'
+  };
+  
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('animated');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, observerOptions);
+  
+  // Observe all elements with animate-on-scroll class
+  document.querySelectorAll('.animate-on-scroll').forEach(el => {
+    observer.observe(el);
+  });
+  
+  // Observe all elements with animate-stagger class
+  document.querySelectorAll('.animate-stagger').forEach((el, index) => {
+    el.style.animationDelay = `${index * 0.1}s`;
+    observer.observe(el);
+  });
+}
+
+// Add stagger delays to grid items
+function addStaggerAnimations() {
+  // Service items
+  const serviceItems = document.querySelectorAll('.service-item');
+  serviceItems.forEach((item, index) => {
+    item.style.animationDelay = `${index * 0.15}s`;
+    item.classList.add('animate-stagger');
+  });
+  
+  // Portfolio items
+  const portfolioItems = document.querySelectorAll('.project-item');
+  portfolioItems.forEach((item, index) => {
+    item.style.animationDelay = `${index * 0.1}s`;
+  });
+  
+  // Blog items
+  const blogItems = document.querySelectorAll('.blog-post-item');
+  blogItems.forEach((item, index) => {
+    item.style.animationDelay = `${index * 0.1}s`;
+  });
+  
+  // Timeline items
+  const timelineItems = document.querySelectorAll('.timeline-item');
+  timelineItems.forEach((item, index) => {
+    item.style.animationDelay = `${index * 0.1}s`;
+  });
+  
+  // Skills items
+  const skillItems = document.querySelectorAll('.skills-item');
+  skillItems.forEach((item, index) => {
+    item.style.animationDelay = `${index * 0.1}s`;
+  });
+  
+  // Tools items
+  const toolItems = document.querySelectorAll('.tools-item');
+  toolItems.forEach((item, index) => {
+    item.style.animationDelay = `${index * 0.05}s`;
+  });
+  
+  // Testimonial items
+  const testimonialItems = document.querySelectorAll('.testimonials-item');
+  testimonialItems.forEach((item, index) => {
+    item.style.animationDelay = `${index * 0.1}s`;
+  });
+}
+
+// Initialize animations after page load
+function initAnimations() {
+  // Add animation classes to sections
+  const sections = document.querySelectorAll('section');
+  sections.forEach(section => {
+    section.classList.add('animate-on-scroll');
+  });
+  
+  // Initialize scroll animations
+  initScrollAnimations();
+  
+  // Add stagger animations
+  setTimeout(() => {
+    addStaggerAnimations();
+  }, 100);
+  
+  // Re-initialize on page navigation
+  const activePage = document.querySelector('[data-page].active');
+  if (activePage) {
+    setTimeout(() => {
+      initScrollAnimations();
+      addStaggerAnimations();
+    }, 300);
+  }
+}
+
+// Enhanced hover effects for cards
+function initCardHovers() {
+  const cards = document.querySelectorAll('.service-item, .content-card, .blog-post-item, .project-item');
+  cards.forEach(card => {
+    card.classList.add('card-hover');
+  });
+}
+
+
+// Initialize on page load
+document.addEventListener('DOMContentLoaded', function() {
+  initAnimations();
+  initCardHovers();
+  
+  // Re-initialize animations when page becomes visible
+  document.addEventListener('visibilitychange', function() {
+    if (!document.hidden) {
+      setTimeout(() => {
+        initScrollAnimations();
+      }, 100);
+    }
+  });
+});
+
+// Re-initialize animations after filter changes
+const originalFilterFunc = filterFunc;
+filterFunc = function(selectedValue) {
+  originalFilterFunc(selectedValue);
+  setTimeout(() => {
+    addStaggerAnimations();
+    initScrollAnimations();
+  }, 100);
+};
