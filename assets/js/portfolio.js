@@ -365,7 +365,8 @@ const displayProjects = function () {
             <video
               width="100%"
               height="200"
-              controls
+              muted
+              loop
               preload="metadata"
               playsinline
               controlsList="nodownload"
@@ -378,6 +379,39 @@ const displayProjects = function () {
           <div class="project-category">Game Videos</div>
         </div>
       `;
+      
+      // Add hover play/pause functionality after element is added to DOM
+      setTimeout(() => {
+        const videoElement = projectItem.querySelector('video');
+        const projectBox = projectItem.querySelector('.project-content-box');
+        
+        if (videoElement && projectBox) {
+          // Play video on hover/mouseenter
+          projectBox.addEventListener('mouseenter', () => {
+            videoElement.play().catch(err => {
+              console.log('Video play failed:', err);
+            });
+          });
+          
+          // Pause and reset video on mouseleave
+          projectBox.addEventListener('mouseleave', () => {
+            videoElement.pause();
+            videoElement.currentTime = 0;
+          });
+          
+          // Also handle touch events for mobile
+          projectBox.addEventListener('touchstart', () => {
+            if (videoElement.paused) {
+              videoElement.play().catch(err => {
+                console.log('Video play failed:', err);
+              });
+            } else {
+              videoElement.pause();
+              videoElement.currentTime = 0;
+            }
+          });
+        }
+      }, 0);
     } else if (project.category === "AI/ML") {
       // AI/ML projects: show as post, open portfolio modal on click
       projectItem.innerHTML = `
