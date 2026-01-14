@@ -122,6 +122,19 @@ for (let i = 0; i < formInputs.length; i++) {
 const navigationLinks = document.querySelectorAll("[data-nav-link]");
 const pages = document.querySelectorAll("[data-page]");
 
+// "Let's connect" button functionality
+const connectBtn = document.querySelector("[data-connect-btn]");
+if (connectBtn) {
+  connectBtn.addEventListener("click", function () {
+    // Find the contact navigation link and trigger it
+    navigationLinks.forEach((link) => {
+      if (link.innerHTML.toLowerCase() === "contact") {
+        link.click();
+      }
+    });
+  });
+}
+
 // add event to all nav link
 for (let i = 0; i < navigationLinks.length; i++) {
   navigationLinks[i].addEventListener("click", function () {
