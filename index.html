@@ -1,1258 +1,744 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Ahmed Arshad Portfolio</title>
-
-    <!--
-    - favicon
-  -->
-    <link
-      rel="shortcut icon"
-      href="./assets/images/logo.png"
-      type="image/png"
-    />
-
-    <!--
-    - custom css link
-  -->
-    <link rel="stylesheet" href="./assets/css/style.css" />
-
-    <!--
-    - google font link
-  -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap"
-      rel="stylesheet"
-    />
-
-    <!--
-    - markdown library
-    -->
-    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
-  </head>
-
-  <body>
-    <!--
-    - #MAIN
-  -->
-
-    <main>
-      <!--
-      - #SIDEBAR
-    -->
-
-      <aside class="sidebar" data-sidebar>
-        <div class="sidebar-info">
-          <figure class="avatar-box">
-            <img
-              src="./assets/images/my-profile.jpg"
-              alt="Ahmed Arshad"
-              width="80"
-            />
-          </figure>
-
-          <div class="info-content">
-            <h1 class="name" title="Ahmed Arshad">Ahmed Arshad</h1>
-
-            <p class="title">Game Engineer</p>
-          </div>
-
-          <button class="info_more-btn" data-sidebar-btn>
-            <span>Show Contacts</span>
-
-            <ion-icon name="chevron-down"></ion-icon>
-          </button>
-        </div>
-
-        <div class="sidebar-info_more">
-          <div class="separator"></div>
-
-          <ul class="contacts-list">
-            <li class="contact-item">
-              <div class="icon-box">
-                <ion-icon name="mail-outline"></ion-icon>
-              </div>
-
-              <div class="contact-info">
-                <p class="contact-title">Email</p>
-                <a href="mailto:contact@ahmedarshad.me" class="contact-link"
-                  >contact@ahmedarshad.me</a
-                >
-              </div>
-            </li>
-
-            <li class="contact-item">
-              <div class="icon-box">
-                <ion-icon name="location-outline"></ion-icon>
-              </div>
-
-              <div class="contact-info">
-                <p class="contact-title">Location</p>
-                <p class="contact-link">Perth, WA, Australia</p>
-              </div>
-            </li>
-
-            <li class="contact-item">
-              <button class="contact-connect-btn" data-connect-btn>
-                <div class="icon-box">
-                  <ion-icon name="chatbubble-outline"></ion-icon>
-                </div>
-
-                <div class="contact-info">
-                  <p class="contact-title">Let's Connect</p>
-                  <p class="contact-link">Get in touch</p>
-                </div>
-              </button>
-            </li>
-          </ul>
-
-          <div class="separator"></div>
-
-          <ul class="social-list">
-            <li class="social-item">
-              <a
-                href="https://www.linkedin.com/in/ahmedarsh/"
-                class="social-link"
-              >
-                <ion-icon name="logo-linkedin"></ion-icon>
-              </a>
-            </li>
-
-            <li class="social-item">
-              <a
-                href="https://github.com/ahmedarsh/"
-                class="social-link"
-              >
-                <ion-icon name="logo-github"></ion-icon>
-              </a>
-            </li>
-
-            <li class="social-item">
-              <a href="https://x.com/itsahmedarshad" class="social-link">
-                <ion-icon name="logo-twitter"></ion-icon>
-              </a>
-            </li>
-          </ul>
-        </div>
-      </aside>
-
-      <!--
-      - #main-content
-    -->
-
-      <div class="main-content">
-        <!--
-        - #NAVBAR
-      -->
-
-        <nav class="navbar">
-          <ul class="navbar-list">
-            <li class="navbar-item">
-              <button class="navbar-link active" data-nav-link>About</button>
-            </li>
-
-            <li class="navbar-item">
-              <button class="navbar-link" data-nav-link>Resume</button>
-            </li>
-
-            <li class="navbar-item">
-              <button class="navbar-link" data-nav-link>Portfolio</button>
-            </li>
-
-            <li class="navbar-item">
-              <button class="navbar-link" data-nav-link>Blog</button>
-            </li>
-
-            <li class="navbar-item">
-              <button class="navbar-link" data-nav-link>Contact</button>
-            </li>
-          </ul>
-        </nav>
-
-        <!--
-        - #ABOUT
-      -->
-
-        <article class="about active" data-page="about">
-          <header>
-            <h2 class="h2 article-title">About me</h2>
-          </header>
-
-          <section class="about-text">
-            <p>
-              Senior Software Engineer with 8+ years of professional experience developing interactive 3D
-              applications using Unity3D and C#. Strong background in 3D math, graphics rendering,
-              performance optimisation, and scalable software architecture. Experienced in building cloud-
-connected systems, internal tools, custom editors, and SDKs that support large-scale, globally
-used applications. Comfortable working across desktop, web, and cloud environments,
-collaborating closely with engineers, product owners, and business stakeholders in Agile
-teams.
-            </p>
-
-           
-          </section>
-
-          <!--
-          - service
-        -->
-
-          <section class="service">
-            <h3 class="h3 service-title">What I'm doing</h3>
-
-            <ul class="service-list">
-              <li class="service-item">
-                <div class="service-icon-box">
-                  <img
-                    src="./assets/images/pc.png"
-                    alt="PC and Console game development icon"
-                    width="40"
-                  />
-                </div>
-
-                <div class="service-content-box">
-                  <h4 class="h4 service-item-title">PC & Console Game Development</h4>
-
-                  <p class="service-item-text">
-                    Development of AAA games and high-quality PC/Console titles using Unity3D and Unreal Engine, focusing on immersive gameplay experiences.
-                  </p>
-                </div>
-              </li>
-
-              <li class="service-item">
-                <div class="service-icon-box">
-                  <img
-                    src="./assets/images/mobile.png"
-                    alt="Mobile development icon"
-                    width="40"
-                  />
-                </div>
-
-                <div class="service-content-box">
-                  <h4 class="h4 service-item-title">Mobile Game Development</h4>
-
-                  <p class="service-item-text">
-                    Professional mobile game development for iOS, Android, Amazon, Facebook Instant Games, Transsion, and other Chinese app stores with performance optimization.
-                  </p>
-                </div>
-              </li>
-
-              <li class="service-item">
-                <div class="service-icon-box">
-                  <img
-                    src="./assets/images/ar.png"
-                    alt="AR/VR development icon"
-                    width="40"
-                  />
-                </div>
-
-                <div class="service-content-box">
-                  <h4 class="h4 service-item-title">AR/VR Game Development</h4>
-
-                  <p class="service-item-text">
-                    Creating immersive augmented and virtual reality experiences with advanced spatial computing and interactive 3D environments.
-                  </p>
-                </div>
-              </li>
-
-              <li class="service-item">
-                <div class="service-icon-box">
-                  <img
-                    src="./assets/images/leader.png"
-                    alt="Technical leadership icon"
-                    width="40"
-                  />
-                </div>
-
-                <div class="service-content-box">
-                  <h4 class="h4 service-item-title">Technical Leadership</h4>
-
-                  <p class="service-item-text">
-                    Leading development teams, mentoring junior developers, providing technical direction, and managing project timelines and deliverables.
-                  </p>
-                </div>
-              </li>
-
-              <li class="service-item">
-                <div class="service-icon-box">
-                  <img
-                    src="./assets/images/bi.png"
-                    alt="Business Intelligence icon"
-                    width="40"
-                  />
-                </div>
-
-                <div class="service-content-box">
-                  <h4 class="h4 service-item-title">Business Intelligence</h4>
-
-                  <p class="service-item-text">
-                    Data analysis, visualization, and business intelligence solutions using Power BI, Tableau, and advanced analytics to drive informed decisions.
-                  </p>
-                </div>
-              </li>
-
-              <li class="service-item">
-                <div class="service-icon-box">
-                  <img
-                    src="./assets/images/ai.png"
-                    alt="AI/ML development icon"
-                    width="40"
-                  />
-                </div>
-
-                <div class="service-content-box">
-                  <h4 class="h4 service-item-title">AI & Machine Learning</h4>
-
-                  <p class="service-item-text">
-                    Integrating intelligent features like dynamic NPCs, sentiment analysis, reinforcement learning, and generative AI for enhanced game experiences.
-                  </p>
-                </div>
-              </li>
-            </ul>
-          </section>
-
-          <!--
-          - testimonials
-        -->
-
-          <section class="testimonials">
-            <h3 class="h3 testimonials-title">Testimonials</h3>
-
-            <ul class="testimonials-list has-scrollbar">
-              <li class="testimonials-item">
-                <div class="content-card" data-testimonials-item>
-                  <figure class="testimonials-avatar-box">
-                    <img
-                      src="./assets/images/testimonial-1.jpg"
-                      alt="ZPlay Team Lead"
-                      width="60"
-                      data-testimonials-avatar
-                    />
-                  </figure>
-
-                  <h4
-                    class="h4 testimonials-item-title"
-                    data-testimonials-title
-                  >
-                    ZPlay Team Lead
-                  </h4>
-
-                  <div class="testimonials-text" data-testimonials-text>
-                    <p>
-                      "Ahmed has consistently delivered high-quality games with innovative mechanics. His expertise in Unity3D and ability to optimize performance has been invaluable to our team."
-                    </p>
-                    <p class="testimonial-role">
-                      Senior Game Developer at ZPlay
-                    </p>
-                  </div>
-                </div>
-              </li>
-
-              <li class="testimonials-item">
-                <div class="content-card" data-testimonials-item>
-                  <figure class="testimonials-avatar-box">
-                    <img
-                      src="./assets/images/testimonial-2.jpg"
-                      alt="Mood Games Lead"
-                      width="60"
-                      data-testimonials-avatar
-                    />
-                  </figure>
-
-                  <h4
-                    class="h4 testimonials-item-title"
-                    data-testimonials-title
-                  >
-                    Mood Games Lead
-                  </h4>
-
-                  <div class="testimonials-text" data-testimonials-text>
-                    <p>
-                      "Ahmed's technical skills are exceptional. He not only develops great games but also mentors junior developers effectively. His contribution to our team has been outstanding."
-                    </p>
-                    <p class="testimonial-role">Senior Game Developer at Mood Games</p>
-                  </div>
-                </div>
-              </li>
-
-              <li class="testimonials-item">
-                <div class="content-card" data-testimonials-item>
-                  <figure class="testimonials-avatar-box">
-                    <img
-                      src="./assets/images/testimonial-4.jpg"
-                      alt="GeniTeam Solutions"
-                      width="60"
-                      data-testimonials-avatar
-                    />
-                  </figure>
-
-                  <h4
-                    class="h4 testimonials-item-title"
-                    data-testimonials-title
-                  >
-                    GeniTeam Solutions
-                  </h4>
-
-                  <div class="testimonials-text" data-testimonials-text>
-                    <p>
-                      "Ahmed's expertise in both Unity3D and Unreal Engine, combined with his AI knowledge, makes him a versatile and valuable team member."
-                    </p>
-                    <p class="testimonial-role">
-                      Senior Software Engineer at GeniTeam
-                    </p>
-                  </div>
-                </div>
-              </li>
-
-              <li class="testimonials-item">
-                <div class="content-card" data-testimonials-item>
-                  <figure class="testimonials-avatar-box">
-                    <img
-                      src="./assets/images/testimonial-3.jpg"
-                      alt="Sablo Studio"
-                      width="60"
-                      data-testimonials-avatar
-                    />
-                  </figure>
-
-                  <h4
-                    class="h4 testimonials-item-title"
-                    data-testimonials-title
-                  >
-                    Sablo Studio
-                  </h4>
-
-                  <div class="testimonials-text" data-testimonials-text>
-                    <p>
-                      "Ahmed's problem-solving skills and technical expertise have been crucial in developing our strategy games. His leadership qualities are commendable."
-                    </p>
-                    <p class="testimonial-role">
-                      Senior Software Engineer at Sablo Studio
-                    </p>
-                  </div>
-                </div>
-              </li>
-            </ul>
-          </section>
-
-          <!--
-          - testimonials modal
-        -->
-
-          <div class="modal-container" data-modal-container>
-            <div class="overlay" data-overlay></div>
-
-            <section class="testimonials-modal">
-              <button class="modal-close-btn" data-modal-close-btn>
-                <ion-icon name="close-outline"></ion-icon>
-              </button>
-
-              <div class="modal-img-wrapper">
-                <figure class="modal-avatar-box">
-                  <img
-                    src="./assets/images/testimonial-1.jpg"
-                    alt="ZPlay Team Lead"
-                    width="80"
-                    data-modal-img
-                  />
-                </figure>
-
-                <img src="./assets/images/icon-quote.svg" alt="quote icon" />
-              </div>
-
-              <div class="modal-content">
-                <h4 class="h3 modal-title" data-modal-title>ZPlay Team Lead</h4>
-
-                <div data-modal-text>
-                  <p>
-                    "Ahmed has consistently delivered high-quality games with innovative mechanics. His expertise in Unity3D and ability to optimize performance has been invaluable to our team."
-                  </p>
-                  <p class="testimonial-role">
-                    Senior Game Developer at ZPlay
-                  </p>
-                </div>
-              </div>
-            </section>
-          </div>
-
-          <!--
-          - clients
-        -->
-
-          <section class="clients">
-            <h3 class="h3 clients-title">Companies I've Worked With</h3>
-
-            <ul class="clients-list has-scrollbar">
-              <li class="clients-item">
-                <a href="https://www.zplay.com/" target="_blank">
-                  <img
-                    src="./assets/images/zplay-logo.png"
-                    alt="ZPlay Games logo"
-                  />
-                </a>
-              </li>
-
-              <li class="clients-item">
-                <a href="https://mood.games/" target="_blank">
-                  <img
-                    src="./assets/images/mood-games-logo.png"
-                    alt="Mood Games logo"
-                  />
-                </a>
-              </li>
-
-              <li class="clients-item">
-                <a href="https://www.geniteam.com/" target="_blank">
-                  <img
-                    src="./assets/images/geniteam1.png"
-                    alt="GeniTeam Solutions logo"
-                  />
-                </a>
-              </li>
-
-              <li class="clients-item">
-                <a href="https://www.sablostudio.com/" target="_blank">
-                  <img
-                    src="./assets/images/sablostudio1.jpg"
-                    alt="Sablo Studio logo"
-                  />
-                </a>
-              </li>
-
-              <li class="clients-item">
-                <a href="https://www.theoccess.com/" target="_blank">
-                  <img
-                    src="./assets/images/occess.jpeg"
-                    alt="The Occess Games Studio logo"
-                  />
-                </a>
-              </li>
-            </ul>
-          </section>
-        </article>
-
-        <!--
-        - #RESUME
-      -->
-
-        <article class="resume" data-page="resume">
-          <header>
-            <h2 class="h2 article-title">Resume</h2>
-          </header>
-
-          <section class="timeline">
-            <div class="title-wrapper">
-              <div class="icon-box">
-                <ion-icon name="book-outline"></ion-icon>
-              </div>
-
-              <h3 class="h3">Experience</h3>
-            </div>
-
-            <ol class="timeline-list">
-              <li class="timeline-item">
-                <h4 class="h4 timeline-item-title">
-                  Senior Software Engineer at Zplay
-                </h4>
-                <span>May 2022 — Present</span>
-                <p class="timeline-text">
-                  • Designed and developed interactive 3D applications using Unity3D and C#, with a strong focus on performance, scalability, and reliability.<br />
-                  • Applied 3D math concepts (vectors, transformations, rotations, spatial calculations) to movement systems, interactions, and visual logic.<br />
-                  • Built and maintained scalable software systems used by global users across desktop, mobile, and WebGL platforms.<br />
-                  • Developed custom level editors and internal tools to improve content creation workflows and reduce iteration time.<br />
-                  • Designed and implemented cloud-based data storage and fetching systems for dynamic content and configuration management.<br />
-                  • Implemented cloud communication pipelines supporting remote levels, live events, and runtime data updates without redeployment.<br />
-                  • Created a custom internal SDK to standardise shared services, tooling, and cloud integrations across multiple projects.<br />
-                  • Integrated AWS-backed services for data processing, configuration, and live system support.<br />
-                  • Optimised graphics rendering, CPU, GPU, and memory usage using Unity profiling and debugging tools.<br />
-                  • Collaborated closely with product owners, engineers, designers, and business stakeholders to deliver high-quality solutions on schedule.<br />
-                  • Designed and maintained clean, modular systems using OOP principles and design patterns.<br />
-                  • Mentored junior engineers, conducted code reviews, and promoted best practices for long-term maintainability.
-                </p>
-              </li>
-
-              <li class="timeline-item">
-                <h4 class="h4 timeline-item-title">
-                  Software Engineer at Mood Games OU
-                </h4>
-                <span>Jul 2021 — May 2022</span>
-                <p class="timeline-text">
-                  • Developed interactive systems and prototypes using Unity and C#.<br />
-                  • Worked on performance-sensitive and physics-based systems requiring accurate spatial and vector calculations.<br />
-                  • Used vector mathematics and transformations to improve movement accuracy and simulation stability.<br />
-                  • Collaborated with design and art teams to ensure strong technical and visual consistency.<br />
-                  • Refactored existing systems to improve performance, stability, and scalability.
-                </p>
-              </li>
-
-              <li class="timeline-item">
-                <h4 class="h4 timeline-item-title">
-                  Senior Software Engineer (Games) at GeniTeam Solutions
-                </h4>
-                <span>Sep 2020 — Jul 2021</span>
-                <p class="timeline-text">
-                  • Designed and developed mobile games and augmented reality experiences using Unity3D and Unreal Engine<br />
-                  • Created and presented pitches for new team projects upon request<br />
-                  • Participated in regular meetings with designers, artists, and play testers<br />
-                  • Spearheaded effort to bring Geniteam Games to AppStore, PlayStore, and other gaming platforms<br />
-                  • Trained teams of incoming engineers in the basics of Unreal Engine
-                </p>
-              </li>
-
-              <li class="timeline-item">
-                <h4 class="h4 timeline-item-title">
-                  Senior Software Engineer (Games) at Sablo Studio
-                </h4>
-                <span>Jan 2019 — Aug 2020</span>
-                <p class="timeline-text">
-                  • Worked on Idle Construction 3D<br />
-                  • Made a module for strategy games<br />
-                  • Responsible for product providing junior developers<br />
-                  • Responsible for helping the art side and finding new techniques to make work-flow smooth
-                </p>
-              </li>
-
-              <li class="timeline-item">
-                <h4 class="h4 timeline-item-title">
-                  Game Developer at The Occess Games Studio
-                </h4>
-                <span>Jan 2017 — Jan 2019</span>
-                <p class="timeline-text">
-                  • Developed, designed, and maintained original mobile games, built from the ground up in Xcode, Unity3D (C#), Unreal Engine (C++)<br />
-                  • Optimized playable ads for maximum speed and performance across modern mobile devices
-                </p>
-              </li>
-            </ol>
-          </section>
-
-          <section class="timeline">
-            <div class="title-wrapper">
-              <div class="icon-box">
-                <ion-icon name="book-outline"></ion-icon>
-              </div>
-
-              <h3 class="h3">Education</h3>
-            </div>
-
-            <ol class="timeline-list">
-              <li class="timeline-item">
-                <h4 class="h4 timeline-item-title">
-                  Master of IT - AI & Data Science
-                </h4>
-                <span>Murdoch University, Perth - June 2023 — June 2025</span>
-                <p class="timeline-text">
-                 Completed advanced studies in Artificial Intelligence and Data Science
-                </p>
-              </li>
-
-              <li class="timeline-item">
-                <h4 class="h4 timeline-item-title">
-                  Bachelor of Science (B.S.) - Information Technology
-                </h4>
-                <span>University of Eduction, Lahore - July 2013 — July 2017</span>
-                <p class="timeline-text">
-                  Completed degree in Information Technology with focus on software development
-                </p>
-              </li>
-            </ol>
-          </section>
-
-          <section class="favorite-tools">
-            <div class="title-wrapper">
-              <div class="icon-box">
-                <ion-icon name="construct-outline"></ion-icon>
-              </div>
-              <h3 class="h3">Favorite Tools</h3>
-            </div>
-
-            <ul class="tools-list has-scrollbar">
-              <li class="tools-item">
-                <a href="https://unity.com/" target="_blank">
-                  <img src="./assets/images/unity-logo.png" alt="Unity" />
-                </a>
-              </li>
-
-              <li class="tools-item">
-                <a href="https://www.unrealengine.com/" target="_blank">
-                  <img src="./assets/images/unrealengine1.png" alt="Unreal Engine" />
-                </a>
-              </li>
-
-              <li class="tools-item">
-                <a
-                  href="https://learn.microsoft.com/en-us/dotnet/csharp/"
-                  target="_blank"
-                >
-                  <img src="./assets/images/csharp-logo.png" alt="C#" />
-                </a>
-              </li>
-
-              <li class="tools-item">
-                <a href="https://isocpp.org/" target="_blank">
-                  <img src="./assets/images/cpp-logo.png" alt="C++" />
-                </a>
-              </li>
-
-              <li class="tools-item">
-                <a href="https://www.python.org/" target="_blank">
-                  <img src="./assets/images/python-logo1.png" alt="Python" />
-                </a>
-              </li>
-
-              <li class="tools-item">
-                <a href="https://www.r-project.org/" target="_blank">
-                  <img src="./assets/images/r-logo.png" alt="R Language" />
-                </a>
-              </li>
-
-              <li class="tools-item">
-                <a href="https://www.tableau.com/" target="_blank">
-                  <img src="./assets/images/tableau-logo.png" alt="Tableau" />
-                </a>
-              </li>
-
-              <li class="tools-item">
-                <a href="https://www.java.com/" target="_blank">
-                  <img src="./assets/images/java-logo.png" alt="Java" />
-                </a>
-              </li>
-
-              <li class="tools-item">
-                <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank">
-                  <img src="./assets/images/javascript-logo.png" alt="JavaScript" />
-                </a>
-              </li>
-
-              <li class="tools-item">
-                <a href="https://www.sql.org/" target="_blank">
-                  <img src="./assets/images/sql-logo.png" alt="SQL" />
-                </a>
-              </li>
-
-              <li class="tools-item">
-                <a href="https://www.blender.org/" target="_blank">
-                  <img src="./assets/images/blender-logo.png" alt="Blender" />
-                </a>
-              </li>
-
-              <li class="tools-item">
-                <a href="https://www.atlassian.com/software/jira" target="_blank">
-                  <img src="./assets/images/jira-logo.png" alt="Jira" />
-                </a>
-              </li>
-
-              <li class="tools-item">
-                <a href="https://trello.com/" target="_blank">
-                  <img src="./assets/images/trello-logo.png" alt="Trello" />
-                </a>
-              </li>
-
-              <li class="tools-item">
-                <a href="https://powerbi.microsoft.com/" target="_blank">
-                  <img src="./assets/images/powerbi-logo.png" alt="Power BI" />
-                </a>
-              </li>
-            </ul>
-          </section>
-
-          <section class="skill">
-            <h3 class="h3 skills-title">My skills</h3>
-
-            <ul class="skills-list content-card">
-              <!-- Game Development Skills -->
-              <li class="skills-item">
-                <div class="title-wrapper">
-                  <h5 class="h5">Unity3D</h5>
-                  <data value="95">95%</data>
-                </div>
-                <div class="skill-progress-bg">
-                  <div class="skill-progress-fill" style="width: 95%"></div>
-                </div>
-              </li>
-
-              <li class="skills-item">
-                <div class="title-wrapper">
-                  <h5 class="h5">Unreal Engine</h5>
-                  <data value="85">85%</data>
-                </div>
-                <div class="skill-progress-bg">
-                  <div class="skill-progress-fill" style="width: 85%"></div>
-                </div>
-              </li>
-
-              <li class="skills-item">
-                <div class="title-wrapper">
-                  <h5 class="h5">Mobile Development</h5>
-                  <data value="90">90%</data>
-                </div>
-                <div class="skill-progress-bg">
-                  <div class="skill-progress-fill" style="width: 90%"></div>
-                </div>
-              </li>
-
-              <li class="skills-item">
-                <div class="title-wrapper">
-                  <h5 class="h5">Game Mechanics & Controllers</h5>
-                  <data value="90">90%</data>
-                </div>
-                <div class="skill-progress-bg">
-                  <div class="skill-progress-fill" style="width: 90%"></div>
-                </div>
-              </li>
-
-              <li class="skills-item">
-                <div class="title-wrapper">
-                  <h5 class="h5">Performance Optimization</h5>
-                  <data value="85">85%</data>
-                </div>
-                <div class="skill-progress-bg">
-                  <div class="skill-progress-fill" style="width: 85%"></div>
-                </div>
-              </li>
-
-              <li class="skills-item">
-                <div class="title-wrapper">
-                  <h5 class="h5">C#</h5>
-                  <data value="90">90%</data>
-                </div>
-                <div class="skill-progress-bg">
-                  <div class="skill-progress-fill" style="width: 90%"></div>
-                </div>
-              </li>
-
-              <li class="skills-item">
-                <div class="title-wrapper">
-                  <h5 class="h5">C++</h5>
-                  <data value="80">80%</data>
-                </div>
-                <div class="skill-progress-bg">
-                  <div class="skill-progress-fill" style="width: 80%"></div>
-                </div>
-              </li>
-
-              <li class="skills-item">
-                <div class="title-wrapper">
-                  <h5 class="h5">SDK Development</h5>
-                  <data value="80">80%</data>
-                </div>
-                <div class="skill-progress-bg">
-                  <div class="skill-progress-fill" style="width: 80%"></div>
-                </div>
-              </li>
-
-              <li class="skills-item">
-                <div class="title-wrapper">
-                  <h5 class="h5">Multiplayer Systems</h5>
-                  <data value="75">75%</data>
-                </div>
-                <div class="skill-progress-bg">
-                  <div class="skill-progress-fill" style="width: 75%"></div>
-                </div>
-              </li>
-
-              <!-- Project Management -->
-              <li class="skills-item">
-                <div class="title-wrapper">
-                  <h5 class="h5">Project Management</h5>
-                  <data value="85">85%</data>
-                </div>
-                <div class="skill-progress-bg">
-                  <div class="skill-progress-fill" style="width: 85%"></div>
-                </div>
-              </li>
-
-              <!-- AI & Machine Learning -->
-              <li class="skills-item">
-                <div class="title-wrapper">
-                  <h5 class="h5">AI & Machine Learning</h5>
-                  <data value="80">80%</data>
-                </div>
-                <div class="skill-progress-bg">
-                  <div class="skill-progress-fill" style="width: 80%"></div>
-                </div>
-              </li>
-
-              <li class="skills-item">
-                <div class="title-wrapper">
-                  <h5 class="h5">NLP & Sentiment Analysis</h5>
-                  <data value="75">75%</data>
-                </div>
-                <div class="skill-progress-bg">
-                  <div class="skill-progress-fill" style="width: 75%"></div>
-                </div>
-              </li>
-
-              <li class="skills-item">
-                <div class="title-wrapper">
-                  <h5 class="h5">Generative AI (GPT, LLaMA)</h5>
-                  <data value="70">70%</data>
-                </div>
-                <div class="skill-progress-bg">
-                  <div class="skill-progress-fill" style="width: 70%"></div>
-                </div>
-              </li>
-
-              <li class="skills-item">
-                <div class="title-wrapper">
-                  <h5 class="h5">Reinforcement Learning</h5>
-                  <data value="70">70%</data>
-                </div>
-                <div class="skill-progress-bg">
-                  <div class="skill-progress-fill" style="width: 70%"></div>
-                </div>
-              </li>
-
-              <li class="skills-item">
-                <div class="title-wrapper">
-                  <h5 class="h5">Python</h5>
-                  <data value="85">85%</data>
-                </div>
-                <div class="skill-progress-bg">
-                  <div class="skill-progress-fill" style="width: 85%"></div>
-                </div>
-              </li>
-
-              <!-- Data Science & Analytics -->
-              <li class="skills-item">
-                <div class="title-wrapper">
-                  <h5 class="h5">SQL & Database Management</h5>
-                  <data value="85">85%</data>
-                </div>
-                <div class="skill-progress-bg">
-                  <div class="skill-progress-fill" style="width: 85%"></div>
-                </div>
-              </li>
-
-              <li class="skills-item">
-                <div class="title-wrapper">
-                  <h5 class="h5">Data Visualization</h5>
-                  <data value="80">80%</data>
-                </div>
-                <div class="skill-progress-bg">
-                  <div class="skill-progress-fill" style="width: 80%"></div>
-                </div>
-              </li>
-
-              <li class="skills-item">
-                <div class="title-wrapper">
-                  <h5 class="h5">ETL & Data Pipelines</h5>
-                  <data value="75">75%</data>
-                </div>
-                <div class="skill-progress-bg">
-                  <div class="skill-progress-fill" style="width: 75%"></div>
-                </div>
-              </li>
-
-              <li class="skills-item">
-                <div class="title-wrapper">
-                  <h5 class="h5">Web Scraping</h5>
-                  <data value="80">80%</data>
-                </div>
-                <div class="skill-progress-bg">
-                  <div class="skill-progress-fill" style="width: 80%"></div>
-                </div>
-              </li>
-
-              <li class="skills-item">
-                <div class="title-wrapper">
-                  <h5 class="h5">R Language</h5>
-                  <data value="75">75%</data>
-                </div>
-                <div class="skill-progress-bg">
-                  <div class="skill-progress-fill" style="width: 75%"></div>
-                </div>
-              </li>
-
-              <!-- Additional Programming -->
-              <li class="skills-item">
-                <div class="title-wrapper">
-                  <h5 class="h5">Java</h5>
-                  <data value="75">75%</data>
-                </div>
-                <div class="skill-progress-bg">
-                  <div class="skill-progress-fill" style="width: 75%"></div>
-                </div>
-              </li>
-
-              <li class="skills-item">
-                <div class="title-wrapper">
-                  <h5 class="h5">JavaScript</h5>
-                  <data value="80">80%</data>
-                </div>
-                <div class="skill-progress-bg">
-                  <div class="skill-progress-fill" style="width: 80%"></div>
-                </div>
-              </li>
-
-              <li class="skills-item">
-                <div class="title-wrapper">
-                  <h5 class="h5">HTML & CSS</h5>
-                  <data value="75">75%</data>
-                </div>
-                <div class="skill-progress-bg">
-                  <div class="skill-progress-fill" style="width: 75%"></div>
-                </div>
-              </li>
-
-              <li class="skills-item">
-                <div class="title-wrapper">
-                  <h5 class="h5">Git & Version Control</h5>
-                  <data value="85">85%</data>
-                </div>
-                <div class="skill-progress-bg">
-                  <div class="skill-progress-fill" style="width: 85%"></div>
-                </div>
-              </li>
-
-              <!-- Soft Skills -->
-              <li class="skills-item">
-                <div class="title-wrapper">
-                  <h5 class="h5">Leadership & Mentorship</h5>
-                  <data value="85">85%</data>
-                </div>
-                <div class="skill-progress-bg">
-                  <div class="skill-progress-fill" style="width: 85%"></div>
-                </div>
-              </li>
-
-              <li class="skills-item">
-                <div class="title-wrapper">
-                  <h5 class="h5">Agile/Scrum</h5>
-                  <data value="80">80%</data>
-                </div>
-                <div class="skill-progress-bg">
-                  <div class="skill-progress-fill" style="width: 80%"></div>
-                </div>
-              </li>
-
-              <li class="skills-item">
-                <div class="title-wrapper">
-                  <h5 class="h5">Problem Solving</h5>
-                  <data value="90">90%</data>
-                </div>
-                <div class="skill-progress-bg">
-                  <div class="skill-progress-fill" style="width: 90%"></div>
-                </div>
-              </li>
-
-              <li class="skills-item">
-                <div class="title-wrapper">
-                  <h5 class="h5">Cross-cultural Collaboration</h5>
-                  <data value="85">85%</data>
-                </div>
-                <div class="skill-progress-bg">
-                  <div class="skill-progress-fill" style="width: 85%"></div>
-                </div>
-              </li>
-            </ul>
-          </section>
-        </article>
-
-        <!--
-        - #PORTFOLIO
-      -->
-
-        <article class="portfolio" data-page="portfolio">
-          <header>
-            <h2 class="h2 article-title">Portfolio</h2>
-          </header>
-
-          <section class="projects">
-            <ul class="filter-list">
-              <li class="filter-item">
-                <button class="active" data-filter-btn>All</button>
-              </li>
-              <li class="filter-item">
-                <button data-filter-btn>AAA Titles</button>
-              </li>
-              <li class="filter-item">
-                <button data-filter-btn>Mobile</button>
-              </li>
-              <li class="filter-item">
-                <button data-filter-btn>AI/ML</button>
-              </li>
-              <li class="filter-item">
-                <button data-filter-btn>Videos</button>
-              </li>
-            </ul>
-
-            <div class="filter-select-box">
-              <button class="filter-select" data-select>
-                <div class="select-value" data-select-value>All</div>
-                <div class="select-icon">
-                  <ion-icon name="chevron-down"></ion-icon>
-                </div>
-              </button>
-
-              <ul class="select-list">
-                <li class="select-item">
-                  <button data-select-item>All</button>
-                </li>
-                <li class="select-item">
-                  <button data-select-item>AAA Titles</button>
-                </li>
-                <li class="select-item">
-                  <button data-select-item>Mobile</button>
-                </li>
-                <li class="select-item">
-                  <button data-select-item>AI/ML</button>
-                </li>
-                <li class="select-item">
-                  <button data-select-item>Videos</button>
-                </li>
-              </ul>
-            </div>
-
-            <ul class="project-list">
-              <!-- Projects will be dynamically loaded here -->
-            </ul>
-          </section>
-        </article>
-
-        <!--
-        - #BLOG
-      -->
-
-        <article class="blog" data-page="blog">
-          <header>
-            <h2 class="h2 article-title">Blog</h2>
-          </header>
-
-          <section class="blog-posts">
-            <ul class="blog-list">
-              <!-- Blog posts will be dynamically loaded here -->
-            </ul>
-          </section>
-
-          <!-- Blog Modal -->
-          <div class="modal-container" data-blog-modal-container>
-            <div class="overlay" data-blog-overlay></div>
-
-            <section class="blog-modal">
-              <button class="modal-close-btn" data-blog-modal-close-btn>
-                <ion-icon name="close-outline"></ion-icon>
-              </button>
-
-              <div class="modal-img-wrapper">
-                <figure class="modal-banner-box">
-                  <img src="" alt="blog post" data-blog-modal-img />
-                </figure>
-              </div>
-
-              <div class="modal-content">
-                <div class="blog-meta" data-blog-modal-meta></div>
-                <h4 class="h3 modal-title" data-blog-modal-title></h4>
-                <div class="blog-content-preview" data-blog-modal-text></div>
-                <div
-                  class="blog-content-full"
-                  data-blog-modal-full-text
-                  style="display: none"
-                ></div>
-                <button class="read-more-btn" data-blog-read-more>
-                  <span>Read More</span>
-                  <ion-icon name="chevron-down-outline"></ion-icon>
-                </button>
-              </div>
-            </section>
-          </div>
-        </article>
-
-        <!--
-        - #CONTACT
-      -->
-
-        <article class="contact" data-page="contact">
-          <header>
-            <h2 class="h2 article-title">Contact</h2>
-          </header>
-
-          <section class="mapbox" data-mapbox>
-            <figure>
-              <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d217897.62046611723!2d115.81611935401217!3d-32.066940343441375!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2a32a1b3b3b3b3b3%3A0x3b3b3b3b3b3b3b3b!2sPerth%2C%20WA%2C%20Australia!5e0!3m2!1sen!2s!4v1710861027346!5m2!1sen!2s"
-                width="400"
-                height="300"
-                loading="lazy"
-              ></iframe>
-            </figure>
-          </section>
-
-          <section class="contact-form">
-            <h3 class="h3 form-title">Contact Form</h3>
-
-            <form action="https://formspree.io/f/mjkrqoaj" method="POST" class="form" data-form>
-              <div class="input-wrapper">
-                <input
-                  type="text"
-                  name="fullname"
-                  class="form-input"
-                  placeholder="Full name"
-                  required
-                  data-form-input
-                />
-
-                <input
-                  type="email"
-                  name="email"
-                  class="form-input"
-                  placeholder="Email address"
-                  required
-                  data-form-input
-                />
-              </div>
-
-              <textarea
-                name="message"
-                class="form-input"
-                placeholder="Your Message"
-                required
-                data-form-input
-              ></textarea>
-
-              <button class="form-btn" type="submit" disabled data-form-btn>
-                <ion-icon name="paper-plane"></ion-icon>
-                <span>Send Message</span>
-              </button>
-            </form>
-          </section>
-        </article>
-      </div>
-    </main>
-
-    <!--
-    - custom js link
-  -->
-    <script src="./assets/js/script.js"></script>
-    <script src="./assets/js/blog.js" defer></script>
-    <script src="./assets/js/portfolio.js" defer></script>
-    <script src="./assets/js/clients-slider.js" defer></script>
-    <script src="./assets/js/tools-slider.js" defer></script>
-
-    <!--
-    - ionicon link
-  -->
-    <script
-      type="module"
-      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
-    ></script>
-    <script
-      nomodule
-      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
-    ></script>
-
-    <!-- Portfolio Project Modal (for AI/ML and future use) -->
-    <div class="portfolio-modal-container" id="portfolio-modal-container" style="display:none;">
-      <div class="portfolio-modal">
-        <button class="portfolio-modal-close" id="portfolio-modal-close" aria-label="Close">&times;</button>
-        <img id="portfolio-modal-img" src="" alt="" style="max-width:100%;margin-bottom:1rem;" />
-        <h2 id="portfolio-modal-title"></h2>
-        <div id="portfolio-modal-description" style="margin-top:1rem;"></div>
-      </div>
-      <div class="portfolio-modal-overlay" id="portfolio-modal-overlay"></div>
+<html class="dark" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta name="description" content="Ahmed Arshad - Senior Game Engineer specializing in Unity3D, C#, mobile games, and performance optimization. 8+ years building immersive 3D applications."/>
+<meta property="og:title" content="Ahmed Arshad - Game Engineer Portfolio"/>
+<meta property="og:description" content="Senior Software Engineer with 8+ years developing interactive 3D applications using Unity3D and C#."/>
+<title>Ahmed Arshad - Game Engineer Portfolio</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#00D7FD",
+                        "primary-dark": "#00b8d9",
+                        "background-light": "#f5f6f8",
+                        "background-dark": "#0f1323",
+                        "surface-dark": "#1a1f36",
+                        "surface-light": "#ffffff",
+                    },
+                    fontFamily: {
+                        "display": ["Plus Jakarta Sans", "sans-serif"],
+                        "body": ["Noto Sans", "sans-serif"],
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "2xl": "1rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<link rel="stylesheet" href="./assets/css/custom.css"/>
+</head>
+<body class="bg-background-dark text-white font-display antialiased selection:bg-primary selection:text-black">
+<div class="relative flex min-h-screen w-full flex-col overflow-x-hidden">
+<!-- Glass Navbar -->
+<nav class="fixed top-0 left-0 right-0 z-50 border-b border-[#272a3a] glass-nav transition-all duration-300" id="navbar">
+<div class="flex items-center justify-between px-6 py-4 lg:px-20 max-w-[1440px] mx-auto w-full">
+<div class="flex items-center gap-3 text-white">
+<div class="size-8 rounded bg-gradient-to-br from-primary to-cyan-800 flex items-center justify-center text-white">
+<span class="material-symbols-outlined text-[20px]">sports_esports</span>
+</div>
+<a href="#home" class="text-white text-lg font-bold leading-tight tracking-tight hover:text-primary transition-colors">Ahmed Arshad</a>
+</div>
+<div class="hidden md:flex items-center gap-8">
+<div class="flex items-center gap-8">
+<a class="nav-link text-gray-300 hover:text-white text-sm font-medium transition-colors" href="#home">Home</a>
+<a class="nav-link text-gray-300 hover:text-white text-sm font-medium transition-colors" href="#about">About</a>
+<a class="nav-link text-gray-300 hover:text-white text-sm font-medium transition-colors" href="#work">Projects</a>
+<a class="nav-link text-gray-300 hover:text-white text-sm font-medium transition-colors" href="#skills">Skills</a>
+    <a class="nav-link text-gray-300 hover:text-white text-sm font-medium transition-colors" href="#career">Experience</a>
+    <a class="nav-link text-gray-300 hover:text-white text-sm font-medium transition-colors" href="./blog.html">Blog</a>
+    <a class="nav-link text-gray-300 hover:text-white text-sm font-medium transition-colors" href="#contact">Contact</a>
+</div>
+    <a href="./assets/cv/AhmedArshad.pdf" target="_blank" rel="noopener" class="flex items-center justify-center rounded-lg h-9 px-4 bg-primary hover:bg-primary-dark transition-colors text-white text-sm font-bold shadow-lg shadow-primary/20" id="download-cv-btn">
+    <span class="truncate">Download CV</span>
+    </a>
+</div>
+<button class="md:hidden text-white" id="mobile-menu-btn" aria-label="Toggle menu">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</div>
+<!-- Mobile Menu -->
+<div class="hidden md:hidden absolute top-full left-0 right-0 bg-surface-dark border-b border-[#272a3a] glass-nav" id="mobile-menu">
+<div class="flex flex-col p-6 gap-4">
+<a class="nav-link text-gray-300 hover:text-white text-sm font-medium transition-colors" href="#home">Home</a>
+<a class="nav-link text-gray-300 hover:text-white text-sm font-medium transition-colors" href="#about">About</a>
+<a class="nav-link text-gray-300 hover:text-white text-sm font-medium transition-colors" href="#work">Projects</a>
+<a class="nav-link text-gray-300 hover:text-white text-sm font-medium transition-colors" href="#skills">Skills</a>
+<a class="nav-link text-gray-300 hover:text-white text-sm font-medium transition-colors" href="#career">Experience</a>
+    <a class="nav-link text-gray-300 hover:text-white text-sm font-medium transition-colors" href="./blog.html">Blog</a>
+    <a class="nav-link text-gray-300 hover:text-white text-sm font-medium transition-colors" href="#contact">Contact</a>
+    <a href="./assets/cv/AhmedArshad.pdf" target="_blank" rel="noopener" class="flex items-center justify-center rounded-lg h-10 px-4 bg-primary hover:bg-primary-dark transition-colors text-white text-sm font-bold shadow-lg shadow-primary/20 mt-2">
+    Download CV
+    </a>
+</div>
+</div>
+</nav>
+
+<main class="flex flex-col w-full pt-16">
+<!-- Hero Section -->
+<section class="relative flex flex-col lg:flex-row items-center justify-center min-h-[90vh] w-full px-4 py-12 lg:py-20 overflow-hidden max-w-[1440px] mx-auto" id="home">
+<div class="absolute inset-0 w-full h-full z-0">
+<div class="absolute inset-0 bg-gradient-to-b from-background-dark/80 via-background-dark/95 to-background-dark z-10"></div>
+<div class="w-full h-full bg-cover bg-center bg-no-repeat opacity-20" style='background-image: url("https://images.unsplash.com/photo-1511512578047-dfb367046420?w=1920");'></div>
+</div>
+<div class="relative z-10 w-full flex flex-col lg:flex-row items-center lg:items-center justify-between gap-12 lg:px-10">
+<div class="flex flex-col items-center lg:items-start text-center lg:text-left gap-6 lg:w-1/2">
+<h1 class="text-5xl md:text-6xl lg:text-7xl font-black tracking-tighter text-white leading-[1.1]">
+Crafting <br/>
+<span class="text-gradient">Immersive Worlds</span>
+</h1>
+    <p class="text-gray-400 text-lg md:text-xl font-light leading-relaxed max-w-xl">
+        Senior game engineer with over eight years of experience building and supporting real-time interactive experiences. Focused on delivering stable, performant gameplay systems and production-ready solutions for shipped titles.
+    </p>
+    <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-surface-dark/70 border border-gray-700/60 backdrop-blur-sm mt-2">
+    <span class="w-2 h-2 rounded-full bg-green-500 animate-pulse"></span>
+    <span class="text-xs font-semibold text-gray-300 uppercase tracking-wider">Open to Opportunities</span>
     </div>
-  </body>
+    <div class="flex flex-wrap gap-4 mt-4 justify-center lg:justify-start w-full">
+    <a href="#work" class="flex min-w-[160px] cursor-pointer items-center justify-center rounded-lg h-12 px-6 bg-primary hover:bg-primary-dark text-white text-base font-bold transition-all hover:scale-105 shadow-xl shadow-primary/25" aria-label="See What I've Built - View Projects">
+    See What I've Built
+    </a>
+<a href="#skills" class="flex min-w-[160px] cursor-pointer items-center justify-center rounded-lg h-12 px-6 bg-surface-dark border border-gray-700 hover:border-primary text-white text-base font-bold transition-all hover:scale-105" aria-label="How I Work - View Skills">
+How I Work
+</a>
+</div>
+<div class="mt-8 pt-8 border-t border-gray-800 w-full max-w-md">
+<p class="text-sm text-gray-500 font-semibold uppercase tracking-wider mb-3">Core Expertise</p>
+<div class="flex flex-wrap gap-4 justify-center lg:justify-start text-gray-300 text-sm">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-base">check_circle</span>
+<span>Unity3D</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-base">check_circle</span>
+<span>C#</span>
+</div>
+    <div class="flex items-center gap-2">
+    <span class="material-symbols-outlined text-primary text-base">check_circle</span>
+    <span>C++</span>
+    </div>
+    <div class="flex items-center gap-2">
+    <span class="material-symbols-outlined text-primary text-base">check_circle</span>
+    <span>Unreal Engine</span>
+    </div>
+    <div class="flex items-center gap-2">
+    <span class="material-symbols-outlined text-primary text-base">check_circle</span>
+    <span>Mobile/WebGL</span>
+    </div>
+    <div class="flex items-center gap-2">
+    <span class="material-symbols-outlined text-primary text-base">check_circle</span>
+    <span>PC/Steam</span>
+    </div>
+    </div>
+</div>
+</div>
+    <div class="relative lg:w-1/2 flex justify-center lg:justify-end mt-10 lg:mt-0">
+    <div class="flex flex-col items-center gap-3 w-full max-w-[520px]">
+    <div class="relative w-[300px] h-[300px] md:w-[450px] md:h-[450px] lg:w-[500px] lg:h-[600px] rounded-2xl overflow-hidden shadow-2xl shadow-primary/20 border border-gray-800 bg-surface-dark card-hover-effect">
+    <img alt="Ahmed Arshad Portrait" class="w-full h-full object-cover object-top" src="./assets/images/my-profile.jpg" loading="eager"/>
+    <div class="absolute inset-0 bg-gradient-to-t from-background-dark via-transparent to-transparent opacity-60"></div>
+    <div class="absolute -bottom-6 -right-6 w-32 h-32 bg-primary/30 rounded-full blur-3xl"></div>
+    <div class="absolute -top-6 -left-6 w-32 h-32 bg-cyan-500/20 rounded-full blur-3xl"></div>
+    </div>
+
+    <div class="w-full flex flex-wrap justify-center gap-2 pt-1">
+<a href="https://www.linkedin.com/in/ahmedarsh/" target="_blank" rel="noopener" class="inline-flex items-center gap-2 px-3 py-2 rounded-full bg-surface-dark/60 border border-gray-800 hover:border-primary/50 hover:shadow-[0_0_18px_rgba(0,215,253,0.10)] transition-all text-sm text-gray-200">
+<svg class="w-5 h-5 text-primary" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"></path></svg>
+LinkedIn
+</a>
+<a href="https://github.com/ahmedarsh/" target="_blank" rel="noopener" class="inline-flex items-center gap-2 px-3 py-2 rounded-full bg-surface-dark/60 border border-gray-800 hover:border-primary/50 hover:shadow-[0_0_18px_rgba(0,215,253,0.10)] transition-all text-sm text-gray-200">
+<svg class="w-5 h-5 text-primary" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0C5.373 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"></path></svg>
+GitHub
+</a>
+    <a href="https://wa.me/61429639836?text=Hi%20Ahmed%2C%20I%20saw%20your%20portfolio%20and%20would%20like%20to%20talk." target="_blank" rel="noopener" class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary hover:bg-primary-dark text-white font-semibold transition-all text-sm shadow-lg shadow-primary/20">
+    <svg class="w-5 h-5" viewBox="0 0 32 32" fill="currentColor" aria-hidden="true"><path d="M19.11 17.48c-.27-.14-1.61-.79-1.86-.88-.25-.09-.43-.14-.61.14-.18.27-.7.88-.86 1.06-.16.18-.32.2-.59.07-.27-.14-1.14-.42-2.17-1.34-.8-.71-1.34-1.59-1.5-1.86-.16-.27-.02-.42.12-.56.13-.13.27-.32.41-.48.14-.16.18-.27.27-.45.09-.18.05-.34-.02-.48-.07-.14-.61-1.48-.84-2.03-.22-.53-.45-.46-.61-.47h-.52c-.18 0-.48.07-.73.34-.25.27-.95.93-.95 2.27 0 1.34.98 2.63 1.12 2.82.14.18 1.93 2.95 4.68 4.13.65.28 1.16.45 1.56.57.66.21 1.26.18 1.73.11.53-.08 1.61-.66 1.84-1.3.23-.64.23-1.18.16-1.3-.07-.11-.25-.18-.52-.32zM16.02 5.33c-5.88 0-10.67 4.79-10.67 10.67 0 1.88.49 3.65 1.35 5.19L5.33 26.67l5.63-1.33c1.48.81 3.18 1.28 5.06 1.28 5.88 0 10.67-4.79 10.67-10.67S21.9 5.33 16.02 5.33zm0 19.45c-1.69 0-3.27-.46-4.64-1.26l-.33-.19-3.34.79.89-3.25-.22-.33c-.86-1.4-1.36-3.04-1.36-4.8 0-5 4.06-9.06 9.06-9.06s9.06 4.06 9.06 9.06-4.06 9.05-9.06 9.05z"></path></svg>
+    Let's Talk
+    </a>
+    </div>
+</div>
+</div>
+</div>
+<div class="absolute bottom-10 left-1/2 transform -translate-x-1/2 flex flex-col items-center gap-2 opacity-60 animate-bounce hidden lg:flex">
+<span class="text-xs text-gray-400 uppercase tracking-widest">Scroll</span>
+<span class="material-symbols-outlined text-white">keyboard_arrow_down</span>
+</div>
+</section>
+
+<!-- About Section -->
+<section class="py-20 px-4 md:px-10 lg:px-20 bg-background-dark border-b border-[#272a3a]" id="about">
+<div class="max-w-6xl mx-auto">
+<div class="text-center mb-12">
+<h2 class="text-3xl md:text-4xl font-bold text-white mb-4">About Me</h2>
+    <p class="text-gray-400 text-lg max-w-2xl mx-auto">
+        I design and deliver Unity games from early development through to release. My work centres on building reliable systems, improving performance, and creating workflows that help teams move faster. I enjoy tackling complex technical challenges and working closely with designers and producers to refine gameplay and ensure a polished player experience across mobile and PC    </p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-12">
+<div class="rounded-2xl bg-surface-dark border border-gray-800 p-6 card-hover-effect">
+<div class="text-primary text-4xl mb-4">
+<span class="material-symbols-outlined">code</span>
+</div>
+<h3 class="text-xl font-bold text-white mb-2">Clean Code</h3>
+<p class="text-gray-400 text-sm">Designing and maintaining clean, modular systems using OOP principles and design patterns.</p>
+</div>
+<div class="rounded-2xl bg-surface-dark border border-gray-800 p-6 card-hover-effect">
+<div class="text-primary text-4xl mb-4">
+<span class="material-symbols-outlined">speed</span>
+</div>
+<h3 class="text-xl font-bold text-white mb-2">Performance</h3>
+<p class="text-gray-400 text-sm">Optimising graphics rendering, CPU, GPU, and memory usage using Unity profiling tools.</p>
+</div>
+<div class="rounded-2xl bg-surface-dark border border-gray-800 p-6 card-hover-effect">
+<div class="text-primary text-4xl mb-4">
+<span class="material-symbols-outlined">groups</span>
+</div>
+<h3 class="text-xl font-bold text-white mb-2">Collaboration</h3>
+<p class="text-gray-400 text-sm">Working closely with product owners, engineers, designers, and stakeholders in Agile teams.</p>
+</div>
+</div>
+</div>
+</section>
+
+<!-- Companies Section -->
+<section class="py-16 px-4 md:px-10 lg:px-20 bg-background-dark border-b border-[#272a3a]">
+<div class="max-w-6xl mx-auto">
+<div class="mb-10 text-center">
+<h2 class="text-2xl md:text-3xl font-bold text-white mb-2">Trusted By Innovators</h2>
+<p class="text-gray-400">Delivering high-quality games for industry leaders.</p>
+</div>
+<div class="relative group">
+<button class="clients-slider-nav clients-slider-left absolute left-0 top-1/2 -translate-y-1/2 z-10 bg-surface-dark/90 hover:bg-surface-dark border border-gray-700 rounded-full w-10 h-10 flex items-center justify-center text-white transition-all opacity-0 group-hover:opacity-100 disabled:opacity-0 disabled:cursor-not-allowed" aria-label="Scroll left">
+<span class="material-symbols-outlined text-lg">chevron_left</span>
+</button>
+<div class="clients-slider-container overflow-x-auto scrollbar-hide scroll-smooth" style="scrollbar-width: none; -ms-overflow-style: none; padding: 0 50px;">
+<div class="flex gap-6 pb-4" style="width: max-content;">
+<div class="flex-shrink-0 w-80 group relative overflow-hidden rounded-xl bg-surface-dark border border-gray-800 hover:border-primary/50 transition-all p-1 card-hover-effect">
+<div class="aspect-video w-full bg-cover bg-center rounded-lg opacity-60 group-hover:opacity-100 transition-opacity" style='background-image: url("./assets/images/zplay-logo.png"); background-size: contain; background-repeat: no-repeat; background-position: center; background-color: #1a1f36;'></div>
+<div class="absolute inset-0 bg-gradient-to-t from-black/90 to-transparent flex flex-col justify-end p-4">
+<p class="text-white font-bold text-lg">ZPlay</p>
+<p class="text-primary text-xs font-medium uppercase tracking-wider">Senior Software Engineer (Games)</p>
+</div>
+</div>
+<div class="flex-shrink-0 w-80 group relative overflow-hidden rounded-xl bg-surface-dark border border-gray-800 hover:border-primary/50 transition-all p-1 card-hover-effect">
+<div class="aspect-video w-full bg-cover bg-center rounded-lg opacity-60 group-hover:opacity-100 transition-opacity" style='background-image: url("./assets/images/mood-games-logo.png"); background-size: contain; background-repeat: no-repeat; background-position: center; background-color: #1a1f36;'></div>
+<div class="absolute inset-0 bg-gradient-to-t from-black/90 to-transparent flex flex-col justify-end p-4">
+<p class="text-white font-bold text-lg">Mood Games</p>
+<p class="text-primary text-xs font-medium uppercase tracking-wider">Software Engineer (Games)</p>
+</div>
+</div>
+<div class="flex-shrink-0 w-80 group relative overflow-hidden rounded-xl bg-surface-dark border border-gray-800 hover:border-primary/50 transition-all p-1 card-hover-effect">
+<div class="aspect-video w-full bg-cover bg-center rounded-lg opacity-60 group-hover:opacity-100 transition-opacity" style='background-image: url("./assets/images/geniteam1.png"); background-size: contain; background-repeat: no-repeat; background-position: center; background-color: #1a1f36;'></div>
+<div class="absolute inset-0 bg-gradient-to-t from-black/90 to-transparent flex flex-col justify-end p-4">
+<p class="text-white font-bold text-lg">GeniTeam</p>
+<p class="text-primary text-xs font-medium uppercase tracking-wider">Software Engineer (Games)</p>
+</div>
+</div>
+<div class="flex-shrink-0 w-80 group relative overflow-hidden rounded-xl bg-surface-dark border border-gray-800 hover:border-primary/50 transition-all p-1 card-hover-effect">
+<div class="aspect-video w-full bg-cover bg-center rounded-lg opacity-60 group-hover:opacity-100 transition-opacity" style='background-image: url("./assets/images/sablostudio1.jpg"); background-size: contain; background-repeat: no-repeat; background-position: center; background-color: #1a1f36;'></div>
+<div class="absolute inset-0 bg-gradient-to-t from-black/90 to-transparent flex flex-col justify-end p-4">
+<p class="text-white font-bold text-lg">Sablo Studio</p>
+<p class="text-primary text-xs font-medium uppercase tracking-wider">Software Engineer (Games)</p>
+</div>
+</div>
+<div class="flex-shrink-0 w-80 group relative overflow-hidden rounded-xl bg-surface-dark border border-gray-800 hover:border-primary/50 transition-all p-1 card-hover-effect">
+<div class="aspect-video w-full bg-cover bg-center rounded-lg opacity-60 group-hover:opacity-100 transition-opacity" style='background-image: url("./assets/images/occess.jpeg"); background-size: contain; background-repeat: no-repeat; background-position: center; background-color: #1a1f36;'></div>
+<div class="absolute inset-0 bg-gradient-to-t from-black/90 to-transparent flex flex-col justify-end p-4">
+<p class="text-white font-bold text-lg">The OCCESS Games Studio</p>
+<p class="text-primary text-xs font-medium uppercase tracking-wider">Software Engineer (Games)</p>
+</div>
+</div>
+</div>
+</div>
+<button class="clients-slider-nav clients-slider-right absolute right-0 top-1/2 -translate-y-1/2 z-10 bg-surface-dark/90 hover:bg-surface-dark border border-gray-700 rounded-full w-10 h-10 flex items-center justify-center text-white transition-all opacity-0 group-hover:opacity-100 disabled:opacity-0 disabled:cursor-not-allowed" aria-label="Scroll right">
+<span class="material-symbols-outlined text-lg">chevron_right</span>
+</button>
+</div>
+</div>
+</section>
+
+<!-- Projects Section -->
+<section class="py-20 px-4 md:px-10 lg:px-20 w-full max-w-[1440px] mx-auto bg-background-dark" id="work">
+<div class="flex flex-col gap-12">
+<div>
+<h2 class="text-white text-3xl font-bold tracking-tight mb-2">My Quests</h2>
+<p class="text-gray-400 max-w-lg">A selection of games, applications, and technical projects.</p>
+</div>
+
+<!-- AAA Titles Row -->
+<div class="flex flex-col gap-4">
+<div class="flex items-center justify-between">
+<h3 class="text-xl font-bold text-white">AAA Titles <span class="text-gray-400 font-normal text-base" id="aaa-count">(0)</span></h3>
+</div>
+<div class="relative group">
+<button class="slider-nav-btn slider-nav-left absolute left-0 top-1/2 -translate-y-1/2 z-10 bg-surface-dark/90 hover:bg-surface-dark border border-gray-700 rounded-full w-10 h-10 flex items-center justify-center text-white transition-all opacity-0 group-hover:opacity-100 disabled:opacity-0 disabled:cursor-not-allowed" aria-label="Scroll left" data-category="AAA Titles">
+<span class="material-symbols-outlined text-lg">chevron_left</span>
+</button>
+<div class="slider-container overflow-x-auto scrollbar-hide scroll-smooth" data-category="AAA Titles" style="scrollbar-width: none; -ms-overflow-style: none; padding: 0 50px;">
+<div class="flex gap-6 pb-4" style="width: max-content;">
+<!-- AAA Titles projects will be loaded here -->
+</div>
+</div>
+<button class="slider-nav-btn slider-nav-right absolute right-0 top-1/2 -translate-y-1/2 z-10 bg-surface-dark/90 hover:bg-surface-dark border border-gray-700 rounded-full w-10 h-10 flex items-center justify-center text-white transition-all opacity-0 group-hover:opacity-100 disabled:opacity-0 disabled:cursor-not-allowed" aria-label="Scroll right" data-category="AAA Titles">
+<span class="material-symbols-outlined text-lg">chevron_right</span>
+</button>
+</div>
+</div>
+
+<!-- Mobile Row -->
+<div class="flex flex-col gap-4">
+<div class="flex items-center justify-between">
+<h3 class="text-xl font-bold text-white">Mobile <span class="text-gray-400 font-normal text-base" id="mobile-count">(0)</span></h3>
+</div>
+<div class="relative group">
+<button class="slider-nav-btn slider-nav-left absolute left-0 top-1/2 -translate-y-1/2 z-10 bg-surface-dark/90 hover:bg-surface-dark border border-gray-700 rounded-full w-10 h-10 flex items-center justify-center text-white transition-all opacity-0 group-hover:opacity-100 disabled:opacity-0 disabled:cursor-not-allowed" aria-label="Scroll left" data-category="Mobile">
+<span class="material-symbols-outlined text-lg">chevron_left</span>
+</button>
+<div class="slider-container overflow-x-auto scrollbar-hide scroll-smooth" data-category="Mobile" style="scrollbar-width: none; -ms-overflow-style: none; padding: 0 50px;">
+<div class="flex gap-6 pb-4" style="width: max-content;">
+<!-- Mobile projects will be loaded here -->
+</div>
+</div>
+<button class="slider-nav-btn slider-nav-right absolute right-0 top-1/2 -translate-y-1/2 z-10 bg-surface-dark/90 hover:bg-surface-dark border border-gray-700 rounded-full w-10 h-10 flex items-center justify-center text-white transition-all opacity-0 group-hover:opacity-100 disabled:opacity-0 disabled:cursor-not-allowed" aria-label="Scroll right" data-category="Mobile">
+<span class="material-symbols-outlined text-lg">chevron_right</span>
+</button>
+</div>
+</div>
+
+<!-- AI/ML Row -->
+<div class="flex flex-col gap-4">
+<div class="flex items-center justify-between">
+<h3 class="text-xl font-bold text-white">AI/ML <span class="text-gray-400 font-normal text-base" id="aiml-count">(0)</span></h3>
+</div>
+<div class="relative group">
+<button class="slider-nav-btn slider-nav-left absolute left-0 top-1/2 -translate-y-1/2 z-10 bg-surface-dark/90 hover:bg-surface-dark border border-gray-700 rounded-full w-10 h-10 flex items-center justify-center text-white transition-all opacity-0 group-hover:opacity-100 disabled:opacity-0 disabled:cursor-not-allowed" aria-label="Scroll left" data-category="AI/ML">
+<span class="material-symbols-outlined text-lg">chevron_left</span>
+</button>
+<div class="slider-container overflow-x-auto scrollbar-hide scroll-smooth" data-category="AI/ML" style="scrollbar-width: none; -ms-overflow-style: none; padding: 0 50px;">
+<div class="flex gap-6 pb-4" style="width: max-content;">
+<!-- AI/ML projects will be loaded here -->
+</div>
+</div>
+<button class="slider-nav-btn slider-nav-right absolute right-0 top-1/2 -translate-y-1/2 z-10 bg-surface-dark/90 hover:bg-surface-dark border border-gray-700 rounded-full w-10 h-10 flex items-center justify-center text-white transition-all opacity-0 group-hover:opacity-100 disabled:opacity-0 disabled:cursor-not-allowed" aria-label="Scroll right" data-category="AI/ML">
+<span class="material-symbols-outlined text-lg">chevron_right</span>
+</button>
+</div>
+</div>
+
+</div>
+</section>
+
+<!-- Skills Section -->
+<section class="py-20 px-4 md:px-10 lg:px-20 bg-surface-dark/30 border-t border-[#272a3a]" id="skills">
+<div class="max-w-6xl mx-auto">
+<div class="text-center mb-12">
+<h2 class="text-3xl md:text-4xl font-bold text-white mb-4">Toolbox</h2>
+<p class="text-gray-400 text-lg">Technologies and tools I use to build amazing games.</p>
+</div>
+
+<!-- Favourite Tools Slider -->
+<div class="mb-16">
+<h3 class="text-2xl font-bold text-white mb-6 text-center">Favourite Tools</h3>
+<div class="relative group">
+<button class="tools-slider-nav tools-slider-left absolute left-0 top-1/2 -translate-y-1/2 z-10 bg-surface-dark/90 hover:bg-surface-dark border border-gray-700 rounded-full w-10 h-10 flex items-center justify-center text-white transition-all opacity-0 group-hover:opacity-100 disabled:opacity-0 disabled:cursor-not-allowed" aria-label="Scroll left">
+<span class="material-symbols-outlined text-lg">chevron_left</span>
+</button>
+<div class="tools-slider-container overflow-x-auto scrollbar-hide scroll-smooth" style="scrollbar-width: none; -ms-overflow-style: none; padding: 0 50px;">
+<div class="flex gap-4 pb-4" style="width: max-content;" id="tools-list">
+<a href="https://unity.com" target="_blank" rel="noopener" class="flex-shrink-0 w-24 h-24 rounded-xl bg-surface-dark border border-gray-800 hover:border-primary/50 hover:shadow-[0_0_18px_rgba(0,215,253,0.15)] transition-all flex items-center justify-center p-3 card-hover-effect">
+<img src="./assets/images/unity-logo.png" alt="Unity" class="w-full h-full object-contain"/>
+</a>
+<a href="https://www.unrealengine.com" target="_blank" rel="noopener" class="flex-shrink-0 w-24 h-24 rounded-xl bg-surface-dark border border-gray-800 hover:border-primary/50 hover:shadow-[0_0_18px_rgba(0,215,253,0.15)] transition-all flex items-center justify-center p-3 card-hover-effect">
+<img src="./assets/images/unrealengine1.png" alt="Unreal Engine" class="w-full h-full object-contain"/>
+</a>
+<a href="https://dotnet.microsoft.com/languages/csharp" target="_blank" rel="noopener" class="flex-shrink-0 w-24 h-24 rounded-xl bg-surface-dark border border-gray-800 hover:border-primary/50 hover:shadow-[0_0_18px_rgba(0,215,253,0.15)] transition-all flex items-center justify-center p-3 card-hover-effect">
+<img src="./assets/images/csharp-logo.png" alt="C#" class="w-full h-full object-contain"/>
+</a>
+<a href="https://isocpp.org" target="_blank" rel="noopener" class="flex-shrink-0 w-24 h-24 rounded-xl bg-surface-dark border border-gray-800 hover:border-primary/50 hover:shadow-[0_0_18px_rgba(0,215,253,0.15)] transition-all flex items-center justify-center p-3 card-hover-effect">
+<img src="./assets/images/cpp-logo.png" alt="C++" class="w-full h-full object-contain"/>
+</a>
+<a href="https://www.python.org" target="_blank" rel="noopener" class="flex-shrink-0 w-24 h-24 rounded-xl bg-surface-dark border border-gray-800 hover:border-primary/50 hover:shadow-[0_0_18px_rgba(0,215,253,0.15)] transition-all flex items-center justify-center p-3 card-hover-effect">
+<img src="./assets/images/python-logo1.png" alt="Python" class="w-full h-full object-contain"/>
+</a>
+<a href="https://www.r-project.org" target="_blank" rel="noopener" class="flex-shrink-0 w-24 h-24 rounded-xl bg-surface-dark border border-gray-800 hover:border-primary/50 hover:shadow-[0_0_18px_rgba(0,215,253,0.15)] transition-all flex items-center justify-center p-3 card-hover-effect">
+<img src="./assets/images/r-logo.png" alt="R" class="w-full h-full object-contain"/>
+</a>
+<a href="https://www.tableau.com" target="_blank" rel="noopener" class="flex-shrink-0 w-24 h-24 rounded-xl bg-surface-dark border border-gray-800 hover:border-primary/50 hover:shadow-[0_0_18px_rgba(0,215,253,0.15)] transition-all flex items-center justify-center p-3 card-hover-effect">
+<img src="./assets/images/tableau-logo.png" alt="Tableau" class="w-full h-full object-contain"/>
+</a>
+<a href="https://www.java.com" target="_blank" rel="noopener" class="flex-shrink-0 w-24 h-24 rounded-xl bg-surface-dark border border-gray-800 hover:border-primary/50 hover:shadow-[0_0_18px_rgba(0,215,253,0.15)] transition-all flex items-center justify-center p-3 card-hover-effect">
+<img src="./assets/images/java-logo.png" alt="Java" class="w-full h-full object-contain"/>
+</a>
+<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank" rel="noopener" class="flex-shrink-0 w-24 h-24 rounded-xl bg-surface-dark border border-gray-800 hover:border-primary/50 hover:shadow-[0_0_18px_rgba(0,215,253,0.15)] transition-all flex items-center justify-center p-3 card-hover-effect">
+<img src="./assets/images/javascript-logo.png" alt="JavaScript" class="w-full h-full object-contain"/>
+</a>
+<a href="https://www.microsoft.com/en-us/sql-server" target="_blank" rel="noopener" class="flex-shrink-0 w-24 h-24 rounded-xl bg-surface-dark border border-gray-800 hover:border-primary/50 hover:shadow-[0_0_18px_rgba(0,215,253,0.15)] transition-all flex items-center justify-center p-3 card-hover-effect">
+<img src="./assets/images/sql-logo.png" alt="SQL" class="w-full h-full object-contain"/>
+</a>
+<a href="https://www.blender.org" target="_blank" rel="noopener" class="flex-shrink-0 w-24 h-24 rounded-xl bg-surface-dark border border-gray-800 hover:border-primary/50 hover:shadow-[0_0_18px_rgba(0,215,253,0.15)] transition-all flex items-center justify-center p-3 card-hover-effect">
+<img src="./assets/images/blender-logo.png" alt="Blender" class="w-full h-full object-contain"/>
+</a>
+<a href="https://www.atlassian.com/software/jira" target="_blank" rel="noopener" class="flex-shrink-0 w-24 h-24 rounded-xl bg-surface-dark border border-gray-800 hover:border-primary/50 hover:shadow-[0_0_18px_rgba(0,215,253,0.15)] transition-all flex items-center justify-center p-3 card-hover-effect">
+<img src="./assets/images/jira-logo.png" alt="Jira" class="w-full h-full object-contain"/>
+</a>
+<a href="https://trello.com" target="_blank" rel="noopener" class="flex-shrink-0 w-24 h-24 rounded-xl bg-surface-dark border border-gray-800 hover:border-primary/50 hover:shadow-[0_0_18px_rgba(0,215,253,0.15)] transition-all flex items-center justify-center p-3 card-hover-effect">
+<img src="./assets/images/trello-logo.png" alt="Trello" class="w-full h-full object-contain"/>
+</a>
+<a href="https://powerbi.microsoft.com" target="_blank" rel="noopener" class="flex-shrink-0 w-24 h-24 rounded-xl bg-surface-dark border border-gray-800 hover:border-primary/50 hover:shadow-[0_0_18px_rgba(0,215,253,0.15)] transition-all flex items-center justify-center p-3 card-hover-effect">
+<img src="./assets/images/powerbi-logo.png" alt="Power BI" class="w-full h-full object-contain"/>
+</a>
+</div>
+</div>
+<button class="tools-slider-nav tools-slider-right absolute right-0 top-1/2 -translate-y-1/2 z-10 bg-surface-dark/90 hover:bg-surface-dark border border-gray-700 rounded-full w-10 h-10 flex items-center justify-center text-white transition-all opacity-0 group-hover:opacity-100 disabled:opacity-0 disabled:cursor-not-allowed" aria-label="Scroll right">
+<span class="material-symbols-outlined text-lg">chevron_right</span>
+</button>
+</div>
+</div>
+
+<div class="skills-panel-container relative">
+<div id="skills-panel" class="skills-panel overflow-y-auto">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6 pb-8">
+<div class="rounded-2xl bg-surface-dark border border-gray-800 p-6 card-hover-effect">
+<h3 class="text-white font-bold text-xl mb-2 flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-2xl">architecture</span>
+Core Engineering
+</h3>
+<p class="text-gray-400 text-sm mb-4">Building robust, maintainable systems that scale</p>
+<ul class="space-y-2 text-gray-300 text-sm leading-relaxed">
+<li class="flex items-start gap-2"><span class="text-primary mt-1">•</span><span>Designing modular architectures that support long-term growth and team collaboration</span></li>
+<li class="flex items-start gap-2"><span class="text-primary mt-1">•</span><span>Writing clean, testable code with clear separation of concerns</span></li>
+<li class="flex items-start gap-2"><span class="text-primary mt-1">•</span><span>Owning and evolving large codebases with confidence and clarity</span></li>
+<li class="flex items-start gap-2"><span class="text-primary mt-1">•</span><span>Systematically reducing technical debt while maintaining feature velocity</span></li>
+<li class="flex items-start gap-2"><span class="text-primary mt-1">•</span><span>Debugging complex issues across systems and platforms</span></li>
+</ul>
+</div>
+<div class="rounded-2xl bg-surface-dark border border-gray-800 p-6 card-hover-effect">
+<h3 class="text-white font-bold text-xl mb-2 flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-2xl">sports_esports</span>
+Gameplay & 3D Systems
+</h3>
+<p class="text-gray-400 text-sm mb-4">Creating responsive, immersive player experiences</p>
+<ul class="space-y-2 text-gray-300 text-sm leading-relaxed">
+<li class="flex items-start gap-2"><span class="text-primary mt-1">•</span><span>Designing gameplay systems that feel responsive and intuitive</span></li>
+<li class="flex items-start gap-2"><span class="text-primary mt-1">•</span><span>Building real-time 3D interactions with precise spatial calculations</span></li>
+<li class="flex items-start gap-2"><span class="text-primary mt-1">•</span><span>Implementing physics-driven mechanics that enhance player agency</span></li>
+<li class="flex items-start gap-2"><span class="text-primary mt-1">•</span><span>Working with transforms, vectors, and spatial logic for accurate behaviors</span></li>
+<li class="flex items-start gap-2"><span class="text-primary mt-1">•</span><span>Creating custom controllers and movement systems tailored to game feel</span></li>
+</ul>
+</div>
+<div class="rounded-2xl bg-surface-dark border border-gray-800 p-6 card-hover-effect">
+<h3 class="text-white font-bold text-xl mb-2 flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-2xl">speed</span>
+Performance & Optimisation
+</h3>
+<p class="text-gray-400 text-sm mb-4">Delivering smooth experiences across all devices</p>
+<ul class="space-y-2 text-gray-300 text-sm leading-relaxed">
+<li class="flex items-start gap-2"><span class="text-primary mt-1">•</span><span>Optimizing frame times and memory usage for consistent performance</span></li>
+<li class="flex items-start gap-2"><span class="text-primary mt-1">•</span><span>Profiling CPU and GPU bottlenecks to identify optimization opportunities</span></li>
+<li class="flex items-start gap-2"><span class="text-primary mt-1">•</span><span>Tuning rendering pipelines for maximum visual quality at target framerates</span></li>
+<li class="flex items-start gap-2"><span class="text-primary mt-1">•</span><span>Adapting games for low-end devices without compromising core experience</span></li>
+<li class="flex items-start gap-2"><span class="text-primary mt-1">•</span><span>Ensuring smooth 60+ FPS delivery across target platforms</span></li>
+</ul>
+</div>
+<div class="rounded-2xl bg-surface-dark border border-gray-800 p-6 card-hover-effect">
+<h3 class="text-white font-bold text-xl mb-2 flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-2xl">palette</span>
+Graphics & Rendering
+</h3>
+<p class="text-gray-400 text-sm mb-4">Balancing visual quality with performance constraints</p>
+<ul class="space-y-2 text-gray-300 text-sm leading-relaxed">
+<li class="flex items-start gap-2"><span class="text-primary mt-1">•</span><span>Optimizing rendering pipelines for efficiency and visual impact</span></li>
+<li class="flex items-start gap-2"><span class="text-primary mt-1">•</span><span>Creating shader-based visual effects that enhance atmosphere</span></li>
+<li class="flex items-start gap-2"><span class="text-primary mt-1">•</span><span>Balancing visual fidelity with performance targets</span></li>
+<li class="flex items-start gap-2"><span class="text-primary mt-1">•</span><span>Supporting both stylised and realistic rendering approaches</span></li>
+</ul>
+</div>
+<div class="rounded-2xl bg-surface-dark border border-gray-800 p-6 card-hover-effect">
+<h3 class="text-white font-bold text-xl mb-2 flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-2xl">cloud</span>
+Cloud & Live Systems
+</h3>
+<p class="text-gray-400 text-sm mb-4">Enabling dynamic content and live game updates</p>
+<ul class="space-y-2 text-gray-300 text-sm leading-relaxed">
+<li class="flex items-start gap-2"><span class="text-primary mt-1">•</span><span>Building live configuration systems for runtime game adjustments</span></li>
+<li class="flex items-start gap-2"><span class="text-primary mt-1">•</span><span>Implementing remote content delivery pipelines</span></li>
+<li class="flex items-start gap-2"><span class="text-primary mt-1">•</span><span>Designing cloud-backed systems for dynamic game features</span></li>
+<li class="flex items-start gap-2"><span class="text-primary mt-1">•</span><span>Enabling runtime feature control without client updates</span></li>
+<li class="flex items-start gap-2"><span class="text-primary mt-1">•</span><span>Architecting service-driven game systems for scalability</span></li>
+</ul>
+</div>
+<div class="rounded-2xl bg-surface-dark border border-gray-800 p-6 card-hover-effect">
+<h3 class="text-white font-bold text-xl mb-2 flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-2xl">psychology</span>
+AI & Data Systems
+</h3>
+<p class="text-gray-400 text-sm mb-4">Leveraging AI to create intelligent game experiences</p>
+<ul class="space-y-2 text-gray-300 text-sm leading-relaxed">
+<li class="flex items-start gap-2"><span class="text-primary mt-1">•</span><span>Building AI-driven gameplay systems that adapt to player behavior</span></li>
+<li class="flex items-start gap-2"><span class="text-primary mt-1">•</span><span>Integrating generative AI for dynamic content creation</span></li>
+<li class="flex items-start gap-2"><span class="text-primary mt-1">•</span><span>Analyzing player behavior to inform design decisions</span></li>
+<li class="flex items-start gap-2"><span class="text-primary mt-1">•</span><span>Creating intelligent content systems that enhance replayability</span></li>
+</ul>
+</div>
+<div class="rounded-2xl bg-surface-dark border border-gray-800 p-6 card-hover-effect md:col-start-1 md:col-end-3 md:max-w-md md:mx-auto">
+<h3 class="text-white font-bold text-xl mb-2 flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-2xl">groups</span>
+Production & Collaboration
+</h3>
+<p class="text-gray-400 text-sm mb-4">Shipping quality games through effective teamwork</p>
+<ul class="space-y-2 text-gray-300 text-sm leading-relaxed">
+<li class="flex items-start gap-2"><span class="text-primary mt-1">•</span><span>Shipping games across Mobile, PC, and Web platforms</span></li>
+<li class="flex items-start gap-2"><span class="text-primary mt-1">•</span><span>Working in Agile environments with iterative development cycles</span></li>
+<li class="flex items-start gap-2"><span class="text-primary mt-1">•</span><span>Owning features end-to-end from design to deployment</span></li>
+<li class="flex items-start gap-2"><span class="text-primary mt-1">•</span><span>Collaborating across disciplines to deliver cohesive experiences</span></li>
+<li class="flex items-start gap-2"><span class="text-primary mt-1">•</span><span>Mentoring engineers and conducting code reviews</span></li>
+</ul>
+</div>
+</div>
+<div class="skills-scroll-hint absolute bottom-0 left-0 right-0 h-16 bg-gradient-to-t from-surface-dark/30 to-transparent pointer-events-none flex items-end justify-center pb-2">
+<span class="text-gray-500 text-xs flex items-center gap-1">
+<span class="material-symbols-outlined text-sm">keyboard_arrow_down</span>
+Scroll for more
+</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<!-- Experience Timeline Section -->
+<section class="py-20 px-4 md:px-10 bg-surface-dark/30 border-t border-[#272a3a]" id="career">
+<div class="max-w-4xl mx-auto">
+<h2 class="text-3xl font-bold text-white mb-12 text-center">Experience</h2>
+<div class="relative pl-8 md:pl-0">
+<div class="hidden md:block absolute left-1/2 top-0 bottom-0 w-px bg-gradient-to-b from-primary via-gray-700 to-transparent -translate-x-1/2"></div>
+<div class="md:hidden absolute left-4 top-0 bottom-0 w-px bg-gray-700"></div>
+<div class="relative flex flex-col md:flex-row items-center justify-between mb-16 group">
+<div class="order-1 md:w-5/12 text-left md:text-right md:pr-10 mb-4 md:mb-0">
+<h3 class="text-xl font-bold text-white group-hover:text-primary transition-colors">Senior Software Engineer</h3>
+    <p class="text-gray-400 text-sm mb-2">Zplay • May 2022 - Present</p>
+    <ul class="text-gray-500 text-sm space-y-1.5 list-none">
+    <li class="flex items-start gap-2"><span class="text-primary mt-0.5">•</span><span>Built remote level delivery pipeline enabling live content updates without client redeployment</span></li>
+    <li class="flex items-start gap-2"><span class="text-primary mt-0.5">•</span><span>Created internal SDK standardizing shared services and cloud integrations across multiple projects</span></li>
+    <li class="flex items-start gap-2"><span class="text-primary mt-0.5">•</span><span>Developed custom level editors reducing content creation iteration time</span></li>
+    <li class="flex items-start gap-2"><span class="text-primary mt-0.5">•</span><span>Implemented cloud-backed data storage systems supporting dynamic configuration and live events</span></li>
+    <li class="flex items-start gap-2"><span class="text-primary mt-0.5">•</span><span>Optimized rendering and memory usage achieving consistent performance across desktop, mobile, and WebGL</span></li>
+    <li class="flex items-start gap-2"><span class="text-primary mt-0.5">•</span><span>Designed modular systems using OOP principles enabling long-term maintainability</span></li>
+    <li class="flex items-start gap-2"><span class="text-primary mt-0.5">•</span><span>Mentored junior engineers and established code review practices improving team velocity</span></li>
+    </ul>
+</div>
+<div class="order-1 absolute left-0 md:static z-10 flex items-center justify-center w-8 h-8 rounded-full bg-surface-dark border-2 border-primary shadow-[0_0_15px_rgba(0,215,253,0.5)] transform -translate-x-1/2 md:translate-x-0">
+<div class="w-2 h-2 rounded-full bg-white"></div>
+</div>
+<div class="order-1 md:w-5/12 md:pl-10"></div>
+</div>
+<div class="relative flex flex-col md:flex-row items-center justify-between mb-16 group">
+<div class="order-1 md:w-5/12"></div>
+<div class="order-1 absolute left-0 md:static z-10 flex items-center justify-center w-8 h-8 rounded-full bg-surface-dark border-2 border-gray-600 group-hover:border-primary transition-colors transform -translate-x-1/2 md:translate-x-0">
+<div class="w-2 h-2 rounded-full bg-gray-400 group-hover:bg-white transition-colors"></div>
+</div>
+<div class="order-1 md:w-5/12 text-left md:pl-10 mb-4 md:mb-0">
+    <h3 class="text-xl font-bold text-white group-hover:text-primary transition-colors">Software Engineer</h3>
+    <p class="text-gray-400 text-sm mb-2">Mood Games OU • Jul 2021 - May 2022</p>
+    <ul class="text-gray-500 text-sm space-y-1.5 list-none">
+    <li class="flex items-start gap-2"><span class="text-primary mt-0.5">•</span><span>Developed physics-driven gameplay systems with precise vector mathematics for accurate movement</span></li>
+    <li class="flex items-start gap-2"><span class="text-primary mt-0.5">•</span><span>Built interactive prototypes demonstrating core mechanics and gameplay loops</span></li>
+    <li class="flex items-start gap-2"><span class="text-primary mt-0.5">•</span><span>Optimized spatial calculations improving simulation stability and responsiveness</span></li>
+    <li class="flex items-start gap-2"><span class="text-primary mt-0.5">•</span><span>Refactored existing systems enhancing performance and scalability</span></li>
+    <li class="flex items-start gap-2"><span class="text-primary mt-0.5">•</span><span>Collaborated with design and art teams ensuring technical and visual consistency</span></li>
+    </ul>
+</div>
+</div>
+<div class="relative flex flex-col md:flex-row items-center justify-between mb-16 group">
+<div class="order-1 md:w-5/12 text-left md:text-right md:pr-10 mb-4 md:mb-0">
+    <h3 class="text-xl font-bold text-white group-hover:text-primary transition-colors">Software Engineer</h3>
+    <p class="text-gray-400 text-sm mb-2">GeniTeam Solutions • Sep 2020 - Jul 2021</p>
+    <ul class="text-gray-500 text-sm space-y-1.5 list-none">
+    <li class="flex items-start gap-2"><span class="text-primary mt-0.5">•</span><span>Built interactive 3D applications with focus on user experience and performance</span></li>
+    <li class="flex items-start gap-2"><span class="text-primary mt-0.5">•</span><span>Developed rapid prototypes validating gameplay concepts and technical feasibility</span></li>
+    <li class="flex items-start gap-2"><span class="text-primary mt-0.5">•</span><span>Integrated third-party SDKs and services expanding platform capabilities</span></li>
+    <li class="flex items-start gap-2"><span class="text-primary mt-0.5">•</span><span>Gained experience with Unreal Engine and C++ expanding technical toolkit</span></li>
+    </ul>
+</div>
+<div class="order-1 absolute left-0 md:static z-10 flex items-center justify-center w-8 h-8 rounded-full bg-surface-dark border-2 border-gray-600 group-hover:border-primary transition-colors transform -translate-x-1/2 md:translate-x-0">
+<div class="w-2 h-2 rounded-full bg-gray-400 group-hover:bg-white transition-colors"></div>
+</div>
+<div class="order-1 md:w-5/12 md:pl-10"></div>
+</div>
+<div class="relative flex flex-col md:flex-row items-center justify-between group">
+<div class="order-1 md:w-5/12"></div>
+<div class="order-1 absolute left-0 md:static z-10 flex items-center justify-center w-8 h-8 rounded-full bg-surface-dark border-2 border-gray-600 group-hover:border-primary transition-colors transform -translate-x-1/2 md:translate-x-0">
+<div class="w-2 h-2 rounded-full bg-gray-400 group-hover:bg-white transition-colors"></div>
+</div>
+<div class="order-1 md:w-5/12 text-left md:pl-10 mb-4 md:mb-0">
+    <h3 class="text-xl font-bold text-white group-hover:text-primary transition-colors">Software Engineer</h3>
+    <p class="text-gray-400 text-sm mb-2">Sablo Studio • Jan 2019 - Aug 2020</p>
+    <ul class="text-gray-500 text-sm space-y-1.5 list-none">
+    <li class="flex items-start gap-2"><span class="text-primary mt-0.5">•</span><span>Engineered real-time 3D features delivering responsive gameplay experiences</span></li>
+    <li class="flex items-start gap-2"><span class="text-primary mt-0.5">•</span><span>Built reusable code modules improving development efficiency across projects</span></li>
+    <li class="flex items-start gap-2"><span class="text-primary mt-0.5">•</span><span>Optimized asset pipelines reducing build times and memory footprint</span></li>
+    <li class="flex items-start gap-2"><span class="text-primary mt-0.5">•</span><span>Tuned rendering performance achieving target framerates on target devices</span></li>
+    </ul>
+</div>
+</div>
+
+<div class="relative flex flex-col md:flex-row items-center justify-between mb-16 group">
+<div class="order-1 md:w-5/12 text-left md:text-right md:pr-10 mb-4 md:mb-0">
+    <h3 class="text-xl font-bold text-white group-hover:text-primary transition-colors">Software Developer</h3>
+    <p class="text-gray-400 text-sm mb-2">The OCCESS Games Studio • May 2017 - Jan 2019</p>
+    <ul class="text-gray-500 text-sm space-y-1.5 list-none">
+    <li class="flex items-start gap-2"><span class="text-primary mt-0.5">•</span><span>Developed interactive game applications with focus on player engagement</span></li>
+    <li class="flex items-start gap-2"><span class="text-primary mt-0.5">•</span><span>Debugged and resolved cross-device compatibility issues ensuring consistent experience</span></li>
+    <li class="flex items-start gap-2"><span class="text-primary mt-0.5">•</span><span>Established profiling workflows identifying performance bottlenecks early</span></li>
+    <li class="flex items-start gap-2"><span class="text-primary mt-0.5">•</span><span>Applied clean coding principles creating maintainable and readable code</span></li>
+    </ul>
+</div>
+<div class="order-1 absolute left-0 md:static z-10 flex items-center justify-center w-8 h-8 rounded-full bg-surface-dark border-2 border-gray-600 group-hover:border-primary transition-colors transform -translate-x-1/2 md:translate-x-0">
+<div class="w-2 h-2 rounded-full bg-gray-400 group-hover:bg-white transition-colors"></div>
+</div>
+<div class="order-1 md:w-5/12 md:pl-10"></div>
+</div>
+
+</div>
+</div>
+</section>
+
+
+<!-- Contact Section - "Press Start" vibe -->
+<section class="py-24 px-4 bg-surface-dark border-t border-[#272a3a]" id="contact">
+<div class="max-w-6xl mx-auto">
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+<div class="flex flex-col justify-center">
+    <h2 class="text-4xl md:text-5xl font-bold text-white mb-6">Let's Build Something Epic</h2>
+    <p class="text-gray-400 text-lg mb-8">
+    I'm open to exciting game development opportunities and collaborations. If you have a project in mind, let's connect and build something amazing together.
+    </p>
+<div class="space-y-4">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary">mail</span>
+<a href="mailto:contact@ahmedarshad.me" class="text-white hover:text-primary transition-colors">contact@ahmedarshad.me</a>
+</div>
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary">location_on</span>
+<span class="text-gray-400">Perth, WA, Australia</span>
+</div>
+</div>
+<div class="flex gap-6 mt-8">
+<a class="flex items-center justify-center w-12 h-12 rounded-full bg-gray-800 hover:bg-primary text-gray-400 hover:text-white transition-all" href="https://www.linkedin.com/in/ahmedarsh/" target="_blank" aria-label="LinkedIn">
+<svg class="w-6 h-6 fill-current" viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"></path></svg>
+</a>
+<a class="flex items-center justify-center w-12 h-12 rounded-full bg-gray-800 hover:bg-primary text-gray-400 hover:text-white transition-all" href="https://github.com/ahmedarsh/" target="_blank" aria-label="GitHub">
+<svg class="w-6 h-6 fill-current" viewBox="0 0 24 24"><path d="M12 0C5.373 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"></path></svg>
+</a>
+    <button class="flex items-center justify-center w-12 h-12 rounded-full bg-gray-800 hover:bg-primary text-gray-400 hover:text-white transition-all" id="call-btn" aria-label="Call">
+    <span class="material-symbols-outlined text-xl">call</span>
+    </button>
+</div>
+</div>
+<div class="rounded-2xl bg-surface-dark border border-gray-800 p-8">
+<h3 class="text-2xl font-bold text-white mb-6">Get In Touch</h3>
+<form action="https://formspree.io/f/mjkrqoaj" method="POST" class="space-y-6" id="contact-form">
+<div>
+<label for="name" class="block text-sm font-medium text-gray-300 mb-2">Name</label>
+<input type="text" id="name" name="name" required class="w-full px-4 py-3 rounded-lg bg-background-dark border border-gray-700 text-white placeholder-gray-500 focus:outline-none focus:border-primary transition-colors" placeholder="Your name"/>
+</div>
+<div>
+<label for="email" class="block text-sm font-medium text-gray-300 mb-2">Email</label>
+<input type="email" id="email" name="email" required class="w-full px-4 py-3 rounded-lg bg-background-dark border border-gray-700 text-white placeholder-gray-500 focus:outline-none focus:border-primary transition-colors" placeholder="your.email@example.com"/>
+</div>
+<div>
+<label for="project-type" class="block text-sm font-medium text-gray-300 mb-2">Project Type</label>
+<select id="project-type" name="project-type" class="w-full px-4 py-3 rounded-lg bg-background-dark border border-gray-700 text-white focus:outline-none focus:border-primary transition-colors">
+<option value="">Select a type</option>
+<option value="game-development">Game Development</option>
+<option value="consulting">Consulting</option>
+<option value="collaboration">Collaboration</option>
+<option value="other">Other</option>
+</select>
+</div>
+<div>
+<label for="message" class="block text-sm font-medium text-gray-300 mb-2">Message</label>
+<textarea id="message" name="message" rows="5" required class="w-full px-4 py-3 rounded-lg bg-background-dark border border-gray-700 text-white placeholder-gray-500 focus:outline-none focus:border-primary transition-colors resize-none" placeholder="Tell me about your project..."></textarea>
+</div>
+<button type="submit" class="w-full flex items-center justify-center gap-2 bg-primary hover:bg-primary-dark text-white text-lg font-bold px-8 py-4 rounded-lg shadow-xl shadow-primary/30 hover:scale-105 transition-all">
+<span class="material-symbols-outlined">send</span>
+    Start the Conversation
+</button>
+<p class="text-xs text-gray-500 text-center mt-4">
+<!-- Form uses Formspree. To use Netlify Forms, replace action with your Netlify form endpoint -->
+</p>
+</form>
+</div>
+</div>
+</div>
+</section>
+
+<footer class="bg-[#0b0e1a] border-t border-[#1e2130] py-8">
+<div class="container mx-auto px-4 flex flex-col md:flex-row justify-between items-center gap-4">
+<p class="text-gray-600 text-sm">© 2024 Ahmed Arshad. All rights reserved.</p>
+<div class="flex gap-6">
+<p class="text-gray-600 text-sm">Perth, WA, Australia</p>
+</div>
+</div>
+</footer>
+</main>
+</div>
+
+<!-- Portfolio Modal -->
+<div class="portfolio-modal-container" id="portfolio-modal-container" style="display:none;">
+<div class="portfolio-modal">
+<button class="portfolio-modal-close" id="portfolio-modal-close" aria-label="Close">&times;</button>
+<img id="portfolio-modal-img" src="" alt="" style="max-width:100%;margin-bottom:1rem; border-radius: 0.5rem;" />
+<h2 id="portfolio-modal-title" class="text-2xl font-bold text-white mb-4"></h2>
+<div id="portfolio-modal-description" style="margin-top:1rem; color: #9ca3af;"></div>
+</div>
+<div class="portfolio-modal-overlay" id="portfolio-modal-overlay"></div>
+</div>
+
+<!-- Blog Modal -->
+<div class="blog-modal-container" data-blog-modal-container style="display: none;">
+<div class="blog-modal">
+<button class="blog-modal-close" data-blog-modal-close-btn aria-label="Close">&times;</button>
+<img data-blog-modal-img src="" alt="" class="blog-modal-img" style="max-width: 100%; margin-bottom: 1rem; border-radius: 0.5rem;" />
+<h2 data-blog-modal-title class="text-2xl font-bold text-white mb-4"></h2>
+<div data-blog-modal-meta class="text-gray-400 text-sm mb-4"></div>
+<div data-blog-modal-text style="margin-top: 1rem; color: #9ca3af;"></div>
+<div data-blog-modal-full-text style="display: none; margin-top: 1rem; color: #9ca3af;"></div>
+<button data-blog-read-more class="mt-4 px-6 py-2 bg-primary hover:bg-primary-dark text-white rounded-lg transition-all flex items-center gap-2" style="display: none;">
+<span>Click to read full story</span>
+<span class="material-symbols-outlined text-sm">expand_more</span>
+</button>
+</div>
+<div class="blog-modal-overlay" data-blog-overlay></div>
+</div>
+
+<!-- Call Modal -->
+<div id="call-modal" class="fixed inset-0 z-50 hidden items-center justify-center bg-black/60 backdrop-blur-sm" aria-hidden="true" role="dialog" aria-labelledby="call-modal-title">
+<div class="relative bg-surface-dark border border-gray-700 rounded-2xl p-8 max-w-md w-full mx-4 shadow-2xl" id="call-modal-content">
+<button id="call-modal-close" class="absolute top-4 right-4 text-gray-400 hover:text-white transition-colors" aria-label="Close">
+<span class="material-symbols-outlined text-2xl">close</span>
+</button>
+<h3 id="call-modal-title" class="text-2xl font-bold text-white mb-4">Call Ahmed</h3>
+<p class="text-gray-400 mb-6">+61 429 639 836</p>
+<div class="flex gap-4">
+<button id="call-copy-btn" class="flex-1 px-6 py-3 rounded-lg bg-primary hover:bg-primary-dark text-white font-semibold transition-all">
+Copy
+</button>
+<button id="call-close-btn" class="flex-1 px-6 py-3 rounded-lg bg-gray-800 hover:bg-gray-700 text-white font-semibold transition-all">
+Close
+</button>
+</div>
+</div>
+</div>
+
+<script src="./assets/js/main.js" defer></script>
+<script src="./assets/js/portfolio.js" defer></script>
+<script src="./assets/js/clients-slider.js" defer></script>
+</body>
 </html>

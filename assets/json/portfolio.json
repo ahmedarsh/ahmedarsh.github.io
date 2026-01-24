@@ -6,6 +6,10 @@
     "image": "./assets/images/busMania.png",
     "alt": "Bus Mania - Car Parking Jam",
     "link": "https://play.google.com/store/apps/details?id=com.together.CrazyBus&hl=en_AU",
+    "links": {
+      "playstore": "https://play.google.com/store/apps/details?id=com.together.CrazyBus&hl=en_AU",
+      "ios": "https://apps.apple.com/us/app/bus-mania-car-parking-jam/id6587552527"
+    },
     "description": "A challenging parking puzzle game where players navigate through colorful parking lots, solve puzzles, and ensure every passenger gets to their matching ride. Features unique gameplay mechanics and brain-teasing challenges."
   },
   {
@@ -15,6 +19,10 @@
     "image": "./assets/images/construction.png",
     "alt": "Idle Construction 3D",
     "link": "https://apps.apple.com/us/app/idle-construction-3d/id1473951944",
+    "links": {
+      "ios": "https://apps.apple.com/us/app/idle-construction-3d/id1473951944",
+      "playstore": "https://play.google.com/store/apps/details?id=com.gpp.idleconstruction&hl=en_AU"
+    },
     "description": "3D construction simulation game with idle mechanics and progression systems. Players build and manage construction projects with realistic 3D graphics and engaging gameplay."
   },
   {
@@ -88,6 +96,15 @@
     "alt": "Idle Home Makeover",
     "link": "https://apps.apple.com/us/app/idle-home-makeover/id1510732870",
     "description": "Idle home renovation game where players transform houses with beautiful makeovers. Features progression systems and satisfying renovation mechanics."
+  },
+  {
+    "id": 0,
+    "title": "Custom LLM",
+    "category": "AI/ML",
+    "order": 0,
+    "image": "./assets/images/llm.png",
+    "alt": "Custom LLM",
+    "description": "Built a custom LLM pipeline from scratch, covering data preparation, training workflow, evaluation, and integration into real-world tooling—focused on controllability, latency, and product-ready deployment."
   },
   {
     "id": 11,
