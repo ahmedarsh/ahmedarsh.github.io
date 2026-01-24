@@ -234,18 +234,54 @@ document.addEventListener('keydown', (e) => {
 
 const contactForm = document.getElementById('contact-form');
 if (contactForm) {
+    const emailInput = contactForm.querySelector('#email');
+    const projectTypeSelect = contactForm.querySelector('#project-type');
+    const messageTextarea = contactForm.querySelector('#message');
+    const submitBtn = contactForm.querySelector('button[type="submit"][data-form-btn]');
+    
+    // Function to validate form and enable/disable submit button
+    function validateForm() {
+        if (!submitBtn) return;
+        
+        const isEmailValid = emailInput && emailInput.value.trim() !== '' && emailInput.checkValidity();
+        const hasProjectType = projectTypeSelect && projectTypeSelect.value !== '';
+        const hasMessage = messageTextarea && messageTextarea.value.trim().length > 0;
+        
+        submitBtn.disabled = !(isEmailValid && hasProjectType && hasMessage);
+    }
+    
+    // Add event listeners to form inputs
+    if (emailInput) {
+        emailInput.addEventListener('input', validateForm);
+        emailInput.addEventListener('change', validateForm);
+    }
+    
+    if (projectTypeSelect) {
+        projectTypeSelect.addEventListener('change', validateForm);
+    }
+    
+    if (messageTextarea) {
+        messageTextarea.addEventListener('input', validateForm);
+        messageTextarea.addEventListener('change', validateForm);
+    }
+    
+    // Initial validation (button should be disabled by default)
+    validateForm();
+    
+    // Handle form submission
     contactForm.addEventListener('submit', (e) => {
         // Form will submit to Formspree
         // You can add custom validation or loading states here
-        const submitBtn = contactForm.querySelector('button[type="submit"]');
         if (submitBtn) {
             submitBtn.disabled = true;
-            submitBtn.textContent = 'Sending...';
+            const originalHTML = submitBtn.innerHTML;
+            submitBtn.innerHTML = '<span class="material-symbols-outlined">send</span>Sending...';
             
             // Re-enable after a delay (Formspree will handle the actual submission)
             setTimeout(() => {
                 submitBtn.disabled = false;
-                submitBtn.innerHTML = '<span class="material-symbols-outlined">send</span>Press Start';
+                submitBtn.innerHTML = originalHTML;
+                validateForm(); // Re-validate to restore proper disabled state
             }, 3000);
         }
     });
