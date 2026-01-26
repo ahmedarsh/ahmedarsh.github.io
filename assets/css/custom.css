@@ -603,83 +603,54 @@ body, html {
 }
 
 /* ============================================
-   NAVIGATION - MOBILE APP-LIKE DESIGN
+   NAVIGATION - MOBILE
    ============================================ */
 @media (max-width: 768px) {
-    /* Hide desktop navbar on mobile */
     #navbar {
-        display: none !important;
+        padding: 0.75rem 1rem;
     }
     
-    /* Mobile Navigation Bar - Always Visible */
-    #mobile-nav-bar {
-        position: fixed;
-        top: 0;
-        left: 0;
-        right: 0;
-        z-index: 50;
-        background: rgba(15, 19, 35, 0.98);
-        backdrop-filter: blur(20px);
-        -webkit-backdrop-filter: blur(20px);
-        border-bottom: 1px solid rgba(39, 42, 58, 0.8);
-        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    #navbar .flex.items-center.justify-between {
+        padding: 0.5rem 0;
     }
     
-    /* Mobile Nav Items - App-like styling */
-    .mobile-nav-item {
-        color: #9ca3af;
-        background: transparent;
-        border: none;
-        min-height: 40px;
+    #mobile-menu {
+        max-height: calc(100vh - 70px);
+        overflow-y: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+    
+    #mobile-menu .nav-link {
+        padding: 0.875rem 0;
+        font-size: 1rem;
+        min-height: 44px;
+        display: flex;
+        align-items: center;
+    }
+    
+    #mobile-menu #download-cv-btn {
+        width: 100%;
+        margin-top: 0.5rem;
+        min-height: 44px;
+        padding: 0.875rem 1rem;
+    }
+    
+    #mobile-menu-btn {
+        min-width: 44px;
+        min-height: 44px;
         display: flex;
         align-items: center;
         justify-content: center;
-        transition: all 0.2s ease;
-        position: relative;
-    }
-    
-    .mobile-nav-item:hover,
-    .mobile-nav-item.active {
-        color: #00D7FD;
-        background: rgba(0, 215, 253, 0.1);
-    }
-    
-    .mobile-nav-item.active::after {
-        content: '';
-        position: absolute;
-        bottom: 0;
-        left: 50%;
-        transform: translateX(-50%);
-        width: 60%;
-        height: 2px;
-        background: #00D7FD;
-        border-radius: 2px 2px 0 0;
-    }
-    
-    /* Scrollable nav container */
-    #mobile-nav-bar .flex.overflow-x-auto {
-        -webkit-overflow-scrolling: touch;
-        scrollbar-width: none;
-    }
-    
-    #mobile-nav-bar .flex.overflow-x-auto::-webkit-scrollbar {
-        display: none;
-    }
-    
-    /* Adjust main content padding for mobile nav */
-    #main-content {
-        padding-top: 100px !important;
     }
 }
 
 /* ============================================
-   HERO SECTION - MOBILE APP-LIKE
+   HERO SECTION - MOBILE
    ============================================ */
 @media (max-width: 768px) {
     #home {
         min-height: auto;
-        padding: 1.5rem 1rem 2.5rem;
-        margin-top: 0;
+        padding: 2rem 1rem 3rem;
     }
     
     #home .relative.flex.flex-col {
@@ -771,27 +742,16 @@ body, html {
 }
 
 /* ============================================
-   SECTIONS - MOBILE APP-LIKE SPACING AND LAYOUT
+   SECTIONS - MOBILE SPACING AND LAYOUT
    ============================================ */
 @media (max-width: 768px) {
     section {
-        padding: 2rem 1rem !important;
-        margin-bottom: 1rem;
+        padding: 3rem 1rem !important;
     }
     
     section h2 {
-        font-size: 1.5rem !important;
-        margin-bottom: 1.25rem !important;
-        font-weight: 700;
-        letter-spacing: -0.02em;
-    }
-    
-    /* App-like card styling for sections */
-    section > div {
-        background: rgba(26, 31, 54, 0.3);
-        border-radius: 16px;
-        padding: 1.5rem;
-        backdrop-filter: blur(10px);
+        font-size: 1.75rem !important;
+        margin-bottom: 1.5rem !important;
     }
     
     /* About section */
@@ -888,26 +848,18 @@ body, html {
 }
 
 /* ============================================
-   BUTTONS & TOUCH TARGETS - MOBILE APP-LIKE
+   BUTTONS & TOUCH TARGETS - MOBILE
    ============================================ */
 @media (max-width: 768px) {
-    button:not(.slider-nav-btn):not(.tools-slider-nav):not(.mobile-nav-item),
+    button:not(.slider-nav-btn):not(.tools-slider-nav),
     a[role="button"],
     .btn-interactive,
     button[type="submit"],
-    a.bg-primary {
-        min-height: 48px;
-        padding: 0.875rem 1.5rem;
+    a.bg-primary,
+    .nav-link {
+        min-height: 44px;
+        padding: 0.75rem 1.25rem;
         font-size: 0.9375rem;
-        border-radius: 12px;
-        font-weight: 600;
-        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
-        transition: all 0.2s ease;
-    }
-    
-    a.bg-primary:active {
-        transform: scale(0.98);
-        box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
     }
     
     /* Project cards - ensure touch-friendly */
@@ -916,63 +868,12 @@ body, html {
         max-width: 100%;
     }
     
-    /* Social links in hero - app-like */
+    /* Social links in hero */
     #home a[href*="linkedin"],
     #home a[href*="github"],
     #home a[href*="wa.me"] {
-        min-height: 44px;
-        padding: 0.75rem 1.25rem;
-        border-radius: 12px;
-        transition: all 0.2s ease;
-    }
-    
-    #home a[href*="linkedin"]:active,
-    #home a[href*="github"]:active,
-    #home a[href*="wa.me"]:active {
-        transform: scale(0.97);
-    }
-}
-
-/* ============================================
-   MOBILE APP-LIKE ENHANCEMENTS
-   ============================================ */
-@media (max-width: 768px) {
-    /* Smooth scrolling for mobile */
-    html {
-        scroll-behavior: smooth;
-        -webkit-overflow-scrolling: touch;
-    }
-    
-    /* App-like section transitions */
-    section {
-        animation: fadeInUp 0.4s ease-out;
-    }
-    
-    @keyframes fadeInUp {
-        from {
-            opacity: 0;
-            transform: translateY(20px);
-        }
-        to {
-            opacity: 1;
-            transform: translateY(0);
-        }
-    }
-    
-    /* Better card shadows */
-    .card-hover-effect {
-        transition: all 0.3s ease;
-    }
-    
-    .card-hover-effect:active {
-        transform: scale(0.98);
-    }
-    
-    /* Improved project cards */
-    .project-card {
-        border-radius: 16px;
-        overflow: hidden;
-        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+        min-height: 40px;
+        padding: 0.625rem 1rem;
     }
 }
 
@@ -1006,20 +907,17 @@ body, html {
 }
 
 /* ============================================
-   TEXT READABILITY - MOBILE APP-LIKE
+   TEXT READABILITY - MOBILE
    ============================================ */
 @media (max-width: 768px) {
     body {
         font-size: 16px;
         line-height: 1.6;
-        -webkit-font-smoothing: antialiased;
-        -moz-osx-font-smoothing: grayscale;
     }
     
     p {
         font-size: 0.9375rem;
         line-height: 1.7;
-        color: #d1d5db;
     }
     
     .text-sm {
@@ -1032,17 +930,7 @@ body, html {
     
     ul li {
         font-size: 0.875rem;
-        line-height: 1.7;
-        color: #9ca3af;
-    }
-    
-    /* App-like spacing */
-    .space-y-2 > * + * {
-        margin-top: 0.75rem;
-    }
-    
-    .space-y-4 > * + * {
-        margin-top: 1.25rem;
+        line-height: 1.6;
     }
 }
 

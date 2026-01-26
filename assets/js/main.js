@@ -9,7 +9,44 @@
 // NAVIGATION & MOBILE MENU
 // ============================================
 
+const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+const mobileMenu = document.getElementById('mobile-menu');
 const navLinks = document.querySelectorAll('.nav-link');
+
+// Mobile menu toggle
+if (mobileMenuBtn && mobileMenu) {
+    mobileMenuBtn.addEventListener('click', () => {
+        mobileMenu.classList.toggle('hidden');
+        const icon = mobileMenuBtn.querySelector('span');
+        if (mobileMenu.classList.contains('hidden')) {
+            icon.textContent = 'menu';
+        } else {
+            icon.textContent = 'close';
+        }
+    });
+
+    // Close mobile menu when clicking a link
+    navLinks.forEach(link => {
+        link.addEventListener('click', () => {
+            mobileMenu.classList.add('hidden');
+            const icon = mobileMenuBtn.querySelector('span');
+            icon.textContent = 'menu';
+            // Also close mobile home submenu
+            const mobileHomeSubmenu = document.getElementById('mobile-home-submenu');
+            const mobileHomeBtn = document.getElementById('mobile-home-btn');
+            if (mobileHomeSubmenu) {
+                mobileHomeSubmenu.classList.add('hidden');
+            }
+            if (mobileHomeBtn) {
+                mobileHomeBtn.setAttribute('aria-expanded', 'false');
+                const arrow = mobileHomeBtn.querySelector('.material-symbols-outlined');
+                if (arrow) {
+                    arrow.style.transform = 'rotate(0deg)';
+                }
+            }
+        });
+    });
+}
 
 // ============================================
 // HOME DROPDOWN - DESKTOP
@@ -72,7 +109,31 @@ if (homeDropdownBtn && homeDropdownMenu) {
     });
 }
 
-// Mobile navigation is now always visible, no dropdown needed
+// ============================================
+// HOME DROPDOWN - MOBILE
+// ============================================
+
+const mobileHomeBtn = document.getElementById('mobile-home-btn');
+const mobileHomeSubmenu = document.getElementById('mobile-home-submenu');
+
+if (mobileHomeBtn && mobileHomeSubmenu) {
+    mobileHomeBtn.addEventListener('click', () => {
+        const isExpanded = mobileHomeBtn.getAttribute('aria-expanded') === 'true';
+        mobileHomeBtn.setAttribute('aria-expanded', !isExpanded);
+        
+        if (isExpanded) {
+            mobileHomeSubmenu.classList.add('hidden');
+        } else {
+            mobileHomeSubmenu.classList.remove('hidden');
+        }
+        
+        // Rotate arrow icon
+        const arrow = mobileHomeBtn.querySelector('.material-symbols-outlined');
+        if (arrow) {
+            arrow.style.transform = isExpanded ? 'rotate(0deg)' : 'rotate(180deg)';
+        }
+    });
+}
 
 // ============================================
 // SMOOTH SCROLL FOR ANCHOR LINKS
@@ -86,8 +147,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         e.preventDefault();
         const target = document.querySelector(href);
         if (target) {
-            const isMobile = window.innerWidth <= 768;
-            const offset = isMobile ? 100 : 80; // Account for fixed navbar (mobile nav is taller)
+            const offset = 80; // Account for fixed navbar
             const targetPosition = target.offsetTop - offset;
             
             window.scrollTo({
@@ -108,8 +168,7 @@ const navLinksArray = Array.from(navLinks);
 function updateActiveNavLink() {
     let current = '';
     const scrollY = window.pageYOffset;
-    const isMobile = window.innerWidth <= 768;
-    const offset = isMobile ? 120 : 150; // Different offset for mobile
+    const offset = 150; // Offset for better UX
 
     sections.forEach(section => {
         const sectionTop = section.offsetTop - offset;
@@ -121,7 +180,6 @@ function updateActiveNavLink() {
         }
     });
 
-    // Update desktop nav links
     navLinksArray.forEach(link => {
         link.classList.remove('active');
         const href = link.getAttribute('href');
@@ -129,18 +187,6 @@ function updateActiveNavLink() {
             link.classList.add('active');
         }
     });
-    
-    // Update mobile nav items
-    if (isMobile) {
-        const mobileNavItems = document.querySelectorAll('.mobile-nav-item');
-        mobileNavItems.forEach(item => {
-            item.classList.remove('active');
-            const href = item.getAttribute('href');
-            if (href === `#${current}`) {
-                item.classList.add('active');
-            }
-        });
-    }
 }
 
 // Throttle scroll events for performance
