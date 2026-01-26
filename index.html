@@ -77,36 +77,49 @@
     <span class="truncate">Download CV</span>
     </a>
 </div>
-<button class="md:hidden text-white" id="mobile-menu-btn" aria-label="Toggle menu">
-<span class="material-symbols-outlined">menu</span>
-</button>
+<!-- Mobile Navigation - Always Visible -->
+<div class="md:hidden fixed top-0 left-0 right-0 z-50 bg-background-dark/95 backdrop-blur-xl border-b border-[#272a3a] shadow-lg" id="mobile-nav-bar">
+<div class="flex items-center justify-between px-4 py-3">
+<a href="#home" class="flex items-center gap-2 text-white">
+<div class="size-7 rounded bg-gradient-to-br from-primary to-cyan-800 flex items-center justify-center text-white">
+<span class="material-symbols-outlined text-[18px]">sports_esports</span>
 </div>
-<!-- Mobile Menu -->
-<div class="hidden md:hidden absolute top-full left-0 right-0 bg-surface-dark border-b border-[#272a3a] glass-nav" id="mobile-menu">
-<div class="flex flex-col p-6 gap-4">
-<!-- Home with sub-items -->
-<div class="flex flex-col">
-<button class="nav-link text-gray-300 hover:text-white text-sm font-medium transition-colors flex items-center justify-between w-full text-left" id="mobile-home-btn" aria-expanded="false">
-<span>Home</span>
-<span class="material-symbols-outlined text-base transition-transform" style="font-size: 18px;">keyboard_arrow_down</span>
-</button>
-<div class="hidden flex-col pl-4 mt-2 gap-2" id="mobile-home-submenu">
-<a class="nav-link text-gray-400 hover:text-white text-sm font-medium transition-colors" href="#home">Go to Top</a>
-<a class="nav-link text-gray-400 hover:text-white text-sm font-medium transition-colors" href="#about">About</a>
-<a class="nav-link text-gray-400 hover:text-white text-sm font-medium transition-colors" href="#work">Projects</a>
-<a class="nav-link text-gray-400 hover:text-white text-sm font-medium transition-colors" href="#skills">Skills</a>
-<a class="nav-link text-gray-400 hover:text-white text-sm font-medium transition-colors" href="#career">Experience</a>
+<span class="text-base font-bold">Ahmed Arshad</span>
+</a>
+<a href="./assets/cv/AhmedArshad.pdf" target="_blank" rel="noopener" class="flex items-center justify-center rounded-lg h-8 px-3 bg-primary text-white text-xs font-bold shadow-lg shadow-primary/20">
+<span class="material-symbols-outlined text-sm">download</span>
+</a>
 </div>
-</div>
-<a class="nav-link text-gray-300 hover:text-white text-sm font-medium transition-colors" href="#contact">Contact</a>
-    <a href="./assets/cv/AhmedArshad.pdf" target="_blank" rel="noopener" class="flex items-center justify-center rounded-lg h-10 px-4 bg-primary hover:bg-primary-dark transition-colors text-white text-sm font-bold shadow-lg shadow-primary/20">
-    Download CV
-    </a>
+<div class="flex items-center gap-1 overflow-x-auto scrollbar-hide px-4 pb-2" style="scrollbar-width: none; -ms-overflow-style: none;">
+<a class="mobile-nav-item nav-link flex-shrink-0 px-4 py-2 rounded-lg text-xs font-semibold transition-all whitespace-nowrap" href="#home">
+<span class="material-symbols-outlined text-sm mr-1">home</span>
+Home
+</a>
+<a class="mobile-nav-item nav-link flex-shrink-0 px-4 py-2 rounded-lg text-xs font-semibold transition-all whitespace-nowrap" href="#about">
+<span class="material-symbols-outlined text-sm mr-1">person</span>
+About
+</a>
+<a class="mobile-nav-item nav-link flex-shrink-0 px-4 py-2 rounded-lg text-xs font-semibold transition-all whitespace-nowrap" href="#work">
+<span class="material-symbols-outlined text-sm mr-1">work</span>
+Projects
+</a>
+<a class="mobile-nav-item nav-link flex-shrink-0 px-4 py-2 rounded-lg text-xs font-semibold transition-all whitespace-nowrap" href="#skills">
+<span class="material-symbols-outlined text-sm mr-1">build</span>
+Skills
+</a>
+<a class="mobile-nav-item nav-link flex-shrink-0 px-4 py-2 rounded-lg text-xs font-semibold transition-all whitespace-nowrap" href="#career">
+<span class="material-symbols-outlined text-sm mr-1">business_center</span>
+Experience
+</a>
+<a class="mobile-nav-item nav-link flex-shrink-0 px-4 py-2 rounded-lg text-xs font-semibold transition-all whitespace-nowrap" href="#contact">
+<span class="material-symbols-outlined text-sm mr-1">mail</span>
+Contact
+</a>
 </div>
 </div>
 </nav>
 
-<main class="flex flex-col w-full pt-16">
+<main class="flex flex-col w-full pt-16 md:pt-16" id="main-content">
 <!-- Hero Section -->
 <section class="relative flex flex-col lg:flex-row items-center justify-center min-h-[90vh] w-full px-4 py-12 lg:py-20 overflow-hidden max-w-[1440px] mx-auto" id="home">
 <div class="absolute inset-0 w-full h-full z-0">
