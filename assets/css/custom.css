@@ -263,6 +263,24 @@ html {
     border-bottom-color: #00D7FD;
 }
 
+/* Home Dropdown Menu - Desktop */
+#home-dropdown {
+    position: relative;
+}
+
+#home-dropdown-menu {
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+}
+
+#home-dropdown-btn {
+    cursor: pointer;
+}
+
+#home-dropdown-btn:hover {
+    color: white;
+}
+
 /* Mobile menu animation */
 #mobile-menu {
     transition: all 0.3s ease;
@@ -277,6 +295,15 @@ html {
 #mobile-menu:not(.hidden) {
     opacity: 1;
     transform: translateY(0);
+}
+
+/* Mobile Home Submenu */
+#mobile-home-submenu {
+    transition: all 0.2s ease;
+}
+
+#mobile-home-btn {
+    cursor: pointer;
 }
 
 /* Loading states */
@@ -559,4 +586,386 @@ html {
 .blog-slider-nav:disabled {
     opacity: 0 !important;
     cursor: not-allowed;
+}
+
+/* ============================================
+   MOBILE RESPONSIVENESS
+   ============================================ */
+
+/* Prevent horizontal scrolling */
+body, html {
+    overflow-x: hidden;
+    max-width: 100vw;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+/* ============================================
+   NAVIGATION - MOBILE
+   ============================================ */
+@media (max-width: 768px) {
+    #navbar {
+        padding: 0.75rem 1rem;
+    }
+    
+    #navbar .flex.items-center.justify-between {
+        padding: 0.5rem 0;
+    }
+    
+    #mobile-menu {
+        max-height: calc(100vh - 70px);
+        overflow-y: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+    
+    #mobile-menu .nav-link {
+        padding: 0.875rem 0;
+        font-size: 1rem;
+        min-height: 44px;
+        display: flex;
+        align-items: center;
+    }
+    
+    #mobile-menu #download-cv-btn {
+        width: 100%;
+        margin-top: 0.5rem;
+        min-height: 44px;
+        padding: 0.875rem 1rem;
+    }
+    
+    #mobile-menu-btn {
+        min-width: 44px;
+        min-height: 44px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+/* ============================================
+   HERO SECTION - MOBILE
+   ============================================ */
+@media (max-width: 768px) {
+    #home {
+        min-height: auto;
+        padding: 2rem 1rem 3rem;
+    }
+    
+    #home .relative.flex.flex-col {
+        gap: 2rem;
+    }
+    
+    #home h1 {
+        font-size: 2.25rem !important;
+        line-height: 1.1;
+        margin-bottom: 1rem;
+    }
+    
+    #home .text-5xl,
+    #home .text-6xl,
+    #home .text-7xl {
+        font-size: 2rem !important;
+    }
+    
+    #home p {
+        font-size: 1rem !important;
+        line-height: 1.6;
+        margin-bottom: 1.5rem;
+    }
+    
+    #home .flex.flex-wrap.gap-4 {
+        flex-direction: column;
+        width: 100%;
+        gap: 0.75rem;
+    }
+    
+    #home .flex.flex-wrap.gap-4 a {
+        width: 100%;
+        min-width: auto;
+        padding: 0.875rem 1.5rem;
+        font-size: 0.9375rem;
+        min-height: 44px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    #home > div > div:last-child {
+        width: 100% !important;
+        margin-top: 2rem;
+    }
+    
+    #home img[alt="Ahmed Arshad Portrait"] {
+        max-width: 100%;
+        height: auto;
+    }
+    
+    #home .relative[class*="w-"] {
+        width: 100% !important;
+        max-width: 280px;
+        height: auto;
+        aspect-ratio: 1;
+    }
+    
+    #home .mt-8.pt-8 {
+        margin-top: 1.5rem;
+        padding-top: 1.5rem;
+        text-align: center;
+    }
+}
+
+/* Small mobile - Hero */
+@media (max-width: 480px) {
+    #home {
+        padding: 1.5rem 1rem 2.5rem;
+    }
+    
+    #home h1 {
+        font-size: 1.75rem !important;
+    }
+    
+    #home .text-5xl,
+    #home .text-6xl,
+    #home .text-7xl {
+        font-size: 1.5rem !important;
+    }
+    
+    #home p {
+        font-size: 0.9375rem !important;
+    }
+    
+    #home .relative[class*="w-"] {
+        max-width: 240px;
+    }
+}
+
+/* ============================================
+   SECTIONS - MOBILE SPACING AND LAYOUT
+   ============================================ */
+@media (max-width: 768px) {
+    section {
+        padding: 3rem 1rem !important;
+    }
+    
+    section h2 {
+        font-size: 1.75rem !important;
+        margin-bottom: 1.5rem !important;
+    }
+    
+    /* About section */
+    #about .grid {
+        grid-template-columns: 1fr !important;
+        gap: 2rem;
+    }
+    
+    /* Projects section - ensure horizontal scroll works */
+    #work .slider-container {
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        scroll-snap-type: x mandatory;
+        padding: 0 1rem !important;
+    }
+    
+    #work .slider-container::-webkit-scrollbar {
+        height: 4px;
+    }
+    
+    #work .slider-container::-webkit-scrollbar-thumb {
+        background: #00D7FD;
+        border-radius: 2px;
+    }
+    
+    #work .slider-nav-btn {
+        opacity: 1 !important;
+        background: rgba(26, 31, 54, 0.95) !important;
+        width: 36px;
+        height: 36px;
+        min-width: 36px;
+        min-height: 36px;
+    }
+    
+    #work .slider-nav-left {
+        left: 0.5rem;
+    }
+    
+    #work .slider-nav-right {
+        right: 0.5rem;
+    }
+    
+    /* Skills section - single column on mobile */
+    #skills .grid {
+        grid-template-columns: 1fr !important;
+    }
+    
+    #skills .skills-panel {
+        max-height: none;
+        height: auto;
+    }
+    
+    #skills .tools-slider-container {
+        padding: 0 1rem !important;
+    }
+    
+    #skills .tools-slider-nav {
+        opacity: 1 !important;
+        background: rgba(26, 31, 54, 0.95) !important;
+        width: 36px;
+        height: 36px;
+        min-width: 36px;
+        min-height: 36px;
+    }
+    
+    /* Experience section - stack vertically */
+    #career .relative.flex.flex-col {
+        flex-direction: column !important;
+    }
+    
+    #career .order-1 {
+        order: 1 !important;
+        width: 100% !important;
+        margin-bottom: 1rem;
+        text-align: left !important;
+        padding: 0 !important;
+    }
+    
+    #career .absolute.left-0 {
+        left: 0.5rem !important;
+    }
+    
+    #career .hidden[class*="md:block"] {
+        display: none !important;
+    }
+    
+    #career [class*="md:hidden"] {
+        display: block !important;
+    }
+    
+    #career .relative.pl-8 {
+        padding-left: 2rem;
+    }
+}
+
+/* ============================================
+   BUTTONS & TOUCH TARGETS - MOBILE
+   ============================================ */
+@media (max-width: 768px) {
+    button:not(.slider-nav-btn):not(.tools-slider-nav),
+    a[role="button"],
+    .btn-interactive,
+    button[type="submit"],
+    a.bg-primary,
+    .nav-link {
+        min-height: 44px;
+        padding: 0.75rem 1.25rem;
+        font-size: 0.9375rem;
+    }
+    
+    /* Project cards - ensure touch-friendly */
+    .project-card {
+        min-width: 280px;
+        max-width: 100%;
+    }
+    
+    /* Social links in hero */
+    #home a[href*="linkedin"],
+    #home a[href*="github"],
+    #home a[href*="wa.me"] {
+        min-height: 40px;
+        padding: 0.625rem 1rem;
+    }
+}
+
+/* ============================================
+   CONTACT FORM - MOBILE
+   ============================================ */
+@media (max-width: 768px) {
+    #contact .grid {
+        grid-template-columns: 1fr !important;
+        gap: 2rem;
+    }
+    
+    #contact form input,
+    #contact form select,
+    #contact form textarea {
+        font-size: 16px; /* Prevents zoom on iOS */
+        padding: 0.875rem;
+        min-height: 44px;
+    }
+    
+    #contact form textarea {
+        min-height: 120px;
+    }
+    
+    #contact form button[type="submit"] {
+        width: 100%;
+        padding: 1rem;
+        font-size: 1rem;
+        min-height: 48px;
+    }
+}
+
+/* ============================================
+   TEXT READABILITY - MOBILE
+   ============================================ */
+@media (max-width: 768px) {
+    body {
+        font-size: 16px;
+        line-height: 1.6;
+    }
+    
+    p {
+        font-size: 0.9375rem;
+        line-height: 1.7;
+    }
+    
+    .text-sm {
+        font-size: 0.875rem;
+    }
+    
+    .text-xs {
+        font-size: 0.8125rem;
+    }
+    
+    ul li {
+        font-size: 0.875rem;
+        line-height: 1.6;
+    }
+}
+
+/* ============================================
+   TABLET ADJUSTMENTS (769px - 1024px)
+   ============================================ */
+@media (min-width: 769px) and (max-width: 1024px) {
+    section {
+        padding: 4rem 2rem !important;
+    }
+    
+    #home {
+        padding: 3rem 2rem 4rem;
+    }
+    
+    #home h1 {
+        font-size: 3.5rem !important;
+    }
+    
+    .project-card {
+        min-width: 320px;
+    }
+    
+    #work .slider-container {
+        padding: 0 2rem !important;
+    }
+}
+
+/* ============================================
+   CONTAINER MAX-WIDTHS - MOBILE
+   ============================================ */
+@media (max-width: 768px) {
+    [class*="max-w-"] {
+        max-width: 100%;
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
 }

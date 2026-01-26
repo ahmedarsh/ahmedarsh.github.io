@@ -7,9 +7,11 @@
 <meta property="og:title" content="Ahmed Arshad - Game Engineer Portfolio"/>
 <meta property="og:description" content="Senior Software Engineer with 8+ years developing interactive 3D applications using Unity3D and C#."/>
 <title>Ahmed Arshad - Game Engineer Portfolio</title>
-<link rel="icon" type="image/png" sizes="32x32" href="images/logo.png">
-<link rel="icon" type="image/png" sizes="16x16" href="images/logo.png">
-<link rel="apple-touch-icon" href="images/logo.png">
+<link rel="icon" type="image/x-icon" href="./assets/images/logo.ico">
+<link rel="icon" type="image/png" sizes="32x32" href="./assets/images/logo.png">
+<link rel="icon" type="image/png" sizes="16x16" href="./assets/images/logo.png">
+<link rel="apple-touch-icon" href="./assets/images/logo.png">
+<link rel="shortcut icon" type="image/png" href="./assets/images/logo.png">
 <link href="https://fonts.googleapis.com" rel="preconnect"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet"/>
@@ -52,13 +54,24 @@
 </div>
 <div class="hidden md:flex items-center gap-8">
 <div class="flex items-center gap-8">
-<a class="nav-link text-gray-300 hover:text-white text-sm font-medium transition-colors" href="#home">Home</a>
-<a class="nav-link text-gray-300 hover:text-white text-sm font-medium transition-colors" href="#about">About</a>
-<a class="nav-link text-gray-300 hover:text-white text-sm font-medium transition-colors" href="#work">Projects</a>
-<a class="nav-link text-gray-300 hover:text-white text-sm font-medium transition-colors" href="#skills">Skills</a>
-    <a class="nav-link text-gray-300 hover:text-white text-sm font-medium transition-colors" href="#career">Experience</a>
-    <a class="nav-link text-gray-300 hover:text-white text-sm font-medium transition-colors" href="./blog.html">Blog</a>
-    <a class="nav-link text-gray-300 hover:text-white text-sm font-medium transition-colors" href="#contact">Contact</a>
+<!-- Home Dropdown -->
+<div class="relative group" id="home-dropdown">
+<button class="nav-link text-gray-300 hover:text-white text-sm font-medium transition-colors flex items-center gap-1" id="home-dropdown-btn" aria-expanded="false" aria-haspopup="true">
+<span>Home</span>
+<span class="material-symbols-outlined text-base transition-transform group-hover:rotate-180" style="font-size: 18px;">keyboard_arrow_down</span>
+</button>
+<div class="absolute top-full left-0 mt-2 w-48 bg-surface-dark border border-gray-700 rounded-lg shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50" id="home-dropdown-menu">
+<div class="py-2">
+<a class="nav-link block px-4 py-2 text-gray-300 hover:text-white hover:bg-surface-dark/50 text-sm font-medium transition-colors" href="#home">Go to Top</a>
+<div class="border-t border-gray-700 my-1"></div>
+<a class="nav-link block px-4 py-2 text-gray-300 hover:text-white hover:bg-surface-dark/50 text-sm font-medium transition-colors" href="#about">About</a>
+<a class="nav-link block px-4 py-2 text-gray-300 hover:text-white hover:bg-surface-dark/50 text-sm font-medium transition-colors" href="#work">Projects</a>
+<a class="nav-link block px-4 py-2 text-gray-300 hover:text-white hover:bg-surface-dark/50 text-sm font-medium transition-colors" href="#skills">Skills</a>
+<a class="nav-link block px-4 py-2 text-gray-300 hover:text-white hover:bg-surface-dark/50 text-sm font-medium transition-colors" href="#career">Experience</a>
+</div>
+</div>
+</div>
+<a class="nav-link text-gray-300 hover:text-white text-sm font-medium transition-colors" href="#contact">Contact</a>
 </div>
     <a href="./assets/cv/AhmedArshad.pdf" target="_blank" rel="noopener" class="flex items-center justify-center rounded-lg h-9 px-4 bg-primary hover:bg-primary-dark transition-colors text-white text-sm font-bold shadow-lg shadow-primary/20" id="download-cv-btn">
     <span class="truncate">Download CV</span>
@@ -71,14 +84,22 @@
 <!-- Mobile Menu -->
 <div class="hidden md:hidden absolute top-full left-0 right-0 bg-surface-dark border-b border-[#272a3a] glass-nav" id="mobile-menu">
 <div class="flex flex-col p-6 gap-4">
-<a class="nav-link text-gray-300 hover:text-white text-sm font-medium transition-colors" href="#home">Home</a>
-<a class="nav-link text-gray-300 hover:text-white text-sm font-medium transition-colors" href="#about">About</a>
-<a class="nav-link text-gray-300 hover:text-white text-sm font-medium transition-colors" href="#work">Projects</a>
-<a class="nav-link text-gray-300 hover:text-white text-sm font-medium transition-colors" href="#skills">Skills</a>
-<a class="nav-link text-gray-300 hover:text-white text-sm font-medium transition-colors" href="#career">Experience</a>
-    <a class="nav-link text-gray-300 hover:text-white text-sm font-medium transition-colors" href="./blog.html">Blog</a>
-    <a class="nav-link text-gray-300 hover:text-white text-sm font-medium transition-colors" href="#contact">Contact</a>
-    <a href="./assets/cv/AhmedArshad.pdf" target="_blank" rel="noopener" class="flex items-center justify-center rounded-lg h-10 px-4 bg-primary hover:bg-primary-dark transition-colors text-white text-sm font-bold shadow-lg shadow-primary/20 mt-2">
+<!-- Home with sub-items -->
+<div class="flex flex-col">
+<button class="nav-link text-gray-300 hover:text-white text-sm font-medium transition-colors flex items-center justify-between w-full text-left" id="mobile-home-btn" aria-expanded="false">
+<span>Home</span>
+<span class="material-symbols-outlined text-base transition-transform" style="font-size: 18px;">keyboard_arrow_down</span>
+</button>
+<div class="hidden flex-col pl-4 mt-2 gap-2" id="mobile-home-submenu">
+<a class="nav-link text-gray-400 hover:text-white text-sm font-medium transition-colors" href="#home">Go to Top</a>
+<a class="nav-link text-gray-400 hover:text-white text-sm font-medium transition-colors" href="#about">About</a>
+<a class="nav-link text-gray-400 hover:text-white text-sm font-medium transition-colors" href="#work">Projects</a>
+<a class="nav-link text-gray-400 hover:text-white text-sm font-medium transition-colors" href="#skills">Skills</a>
+<a class="nav-link text-gray-400 hover:text-white text-sm font-medium transition-colors" href="#career">Experience</a>
+</div>
+</div>
+<a class="nav-link text-gray-300 hover:text-white text-sm font-medium transition-colors" href="#contact">Contact</a>
+    <a href="./assets/cv/AhmedArshad.pdf" target="_blank" rel="noopener" class="flex items-center justify-center rounded-lg h-10 px-4 bg-primary hover:bg-primary-dark transition-colors text-white text-sm font-bold shadow-lg shadow-primary/20">
     Download CV
     </a>
 </div>

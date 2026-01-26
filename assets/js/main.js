@@ -31,7 +31,107 @@ if (mobileMenuBtn && mobileMenu) {
             mobileMenu.classList.add('hidden');
             const icon = mobileMenuBtn.querySelector('span');
             icon.textContent = 'menu';
+            // Also close mobile home submenu
+            const mobileHomeSubmenu = document.getElementById('mobile-home-submenu');
+            const mobileHomeBtn = document.getElementById('mobile-home-btn');
+            if (mobileHomeSubmenu) {
+                mobileHomeSubmenu.classList.add('hidden');
+            }
+            if (mobileHomeBtn) {
+                mobileHomeBtn.setAttribute('aria-expanded', 'false');
+                const arrow = mobileHomeBtn.querySelector('.material-symbols-outlined');
+                if (arrow) {
+                    arrow.style.transform = 'rotate(0deg)';
+                }
+            }
         });
+    });
+}
+
+// ============================================
+// HOME DROPDOWN - DESKTOP
+// ============================================
+
+const homeDropdownBtn = document.getElementById('home-dropdown-btn');
+const homeDropdownMenu = document.getElementById('home-dropdown-menu');
+const homeDropdown = document.getElementById('home-dropdown');
+
+if (homeDropdownBtn && homeDropdownMenu) {
+    // Toggle dropdown on click
+    homeDropdownBtn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        const isExpanded = homeDropdownBtn.getAttribute('aria-expanded') === 'true';
+        homeDropdownBtn.setAttribute('aria-expanded', !isExpanded);
+        
+        // Rotate arrow icon
+        const arrow = homeDropdownBtn.querySelector('.material-symbols-outlined');
+        
+        if (isExpanded) {
+            homeDropdownMenu.classList.add('opacity-0', 'invisible');
+            homeDropdownMenu.classList.remove('opacity-100', 'visible');
+            if (arrow) {
+                arrow.style.transform = 'rotate(0deg)';
+            }
+        } else {
+            homeDropdownMenu.classList.remove('opacity-0', 'invisible');
+            homeDropdownMenu.classList.add('opacity-100', 'visible');
+            if (arrow) {
+                arrow.style.transform = 'rotate(180deg)';
+            }
+        }
+    });
+
+    // Close dropdown when clicking outside
+    document.addEventListener('click', (e) => {
+        if (!homeDropdown.contains(e.target)) {
+            homeDropdownMenu.classList.add('opacity-0', 'invisible');
+            homeDropdownMenu.classList.remove('opacity-100', 'visible');
+            homeDropdownBtn.setAttribute('aria-expanded', 'false');
+            const arrow = homeDropdownBtn.querySelector('.material-symbols-outlined');
+            if (arrow) {
+                arrow.style.transform = 'rotate(0deg)';
+            }
+        }
+    });
+
+    // Close dropdown when clicking a submenu link
+    const homeSubmenuLinks = homeDropdownMenu.querySelectorAll('.nav-link');
+    homeSubmenuLinks.forEach(link => {
+        link.addEventListener('click', () => {
+            homeDropdownMenu.classList.add('opacity-0', 'invisible');
+            homeDropdownMenu.classList.remove('opacity-100', 'visible');
+            homeDropdownBtn.setAttribute('aria-expanded', 'false');
+            const arrow = homeDropdownBtn.querySelector('.material-symbols-outlined');
+            if (arrow) {
+                arrow.style.transform = 'rotate(0deg)';
+            }
+        });
+    });
+}
+
+// ============================================
+// HOME DROPDOWN - MOBILE
+// ============================================
+
+const mobileHomeBtn = document.getElementById('mobile-home-btn');
+const mobileHomeSubmenu = document.getElementById('mobile-home-submenu');
+
+if (mobileHomeBtn && mobileHomeSubmenu) {
+    mobileHomeBtn.addEventListener('click', () => {
+        const isExpanded = mobileHomeBtn.getAttribute('aria-expanded') === 'true';
+        mobileHomeBtn.setAttribute('aria-expanded', !isExpanded);
+        
+        if (isExpanded) {
+            mobileHomeSubmenu.classList.add('hidden');
+        } else {
+            mobileHomeSubmenu.classList.remove('hidden');
+        }
+        
+        // Rotate arrow icon
+        const arrow = mobileHomeBtn.querySelector('.material-symbols-outlined');
+        if (arrow) {
+            arrow.style.transform = isExpanded ? 'rotate(0deg)' : 'rotate(180deg)';
+        }
     });
 }
 
