@@ -390,6 +390,57 @@ html {
     }
 }
 
+/* Video Modal Styles */
+#video-modal {
+    animation: fadeIn 0.3s ease-out;
+}
+
+#video-modal #video-modal-player {
+    max-width: 100%;
+    max-height: 85vh;
+    width: auto;
+    height: auto;
+    background: #000;
+    border-radius: 12px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.8);
+}
+
+#video-modal #video-modal-title {
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+    margin-bottom: 1.5rem;
+}
+
+#video-modal #video-modal-close {
+    transition: all 0.2s ease;
+}
+
+#video-modal #video-modal-close:hover {
+    background: rgba(0, 215, 253, 0.2);
+    transform: scale(1.1);
+}
+
+#video-modal #video-modal-close:active {
+    transform: scale(0.95);
+}
+
+@media (max-width: 768px) {
+    #video-modal #video-modal-player {
+        max-height: 75vh;
+        width: 100%;
+    }
+    
+    #video-modal #video-modal-title {
+        font-size: 1.25rem;
+        margin-bottom: 1rem;
+    }
+    
+    #video-modal #video-modal-close {
+        top: 0.5rem;
+        right: 0.5rem;
+        padding: 0.5rem;
+    }
+}
+
 /* Blog Modal Styles */
 .blog-modal-container {
     position: fixed;

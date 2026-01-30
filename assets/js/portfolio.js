@@ -14,7 +14,8 @@ const videoMapping = {
   "Sniper Shooter Mission Games": "./assets/videos/video5.mp4",
   "Kung Fu Karate Boxing Games 3D": "./assets/videos/video6.mp4",
   "Bus Mania - Car Parking Jam": "./assets/videos/BusMania.mp4",
-  "Fit Sort": "./assets/videos/FitSort.mp4"
+  "Fit Sort": "./assets/videos/FitSort.mp4",
+  "Snake Hole Out": "./assets/videos/snakehole.mp4"
 };
 
 // Helper: Extract platforms from link(s) - supports multiple platforms
@@ -63,15 +64,6 @@ const portfolioData = [
     "description": "A challenging parking puzzle game where players navigate through colorful parking lots, solve puzzles, and ensure every passenger gets to their matching ride. Features unique gameplay mechanics and brain-teasing challenges."
   },
   {
-    "id": 33,
-    "title": "Fit Sort",
-    "category": "Mobile",
-    "image": "./assets/images/FitsortIcon.png",
-    "alt": "Fit Sort",
-    "link": "https://play.google.com/store/apps/details?id=com.hcgames.fitsortgp",
-    "description": "Can you perfectly mix, match, and blend your way to victory?"
-  },
-  {
     "id": 2,
     "title": "Idle Construction 3D",
     "category": "Mobile",
@@ -86,6 +78,27 @@ const portfolioData = [
   },
   {
     "id": 3,
+    "title": "Fit Sort",
+    "category": "Mobile",
+    "image": "./assets/images/FitsortIcon.png",
+    "alt": "Fit Sort",
+    "link": "https://play.google.com/store/apps/details?id=com.hcgames.fitsortgp",
+    "description": "Can you perfectly mix, match, and blend your way to victory?"
+  },
+  {
+    "id": 4,
+    "title": "Snake Hole Out",
+    "category": "Mobile",
+    "image": "./assets/images/snakehole.png",
+    "alt": "Snake Hole Out",
+    "link": "https://play.google.com/store/apps/details?id=com.zplay.SnakeHole",
+    "links": {
+      "playstore": "https://play.google.com/store/apps/details?id=com.zplay.SnakeHole"
+    },
+    "description": "A clever, colorful puzzle adventure that will twist your brain in the most satisfying way"
+  },
+  {
+    "id": 5,
     "title": "Dive Fever",
     "category": "Mobile",
     "image": "./assets/images/dive.png",
@@ -94,7 +107,7 @@ const portfolioData = [
     "description": "Fish & Sushi Time! Explore the sea, catch clown fishes, sharks, and even narwhals! Make them into sushi and sell to hungry customers. Earn lots of money and become the most successful billionaire!"
   },
   {
-    "id": 4,
+    "id": 6,
     "title": "Mini Chef",
     "category": "Mobile",
     "image": "./assets/images/sushi.png",
@@ -103,7 +116,7 @@ const portfolioData = [
     "description": "Have the most satisfying cooking animation. Manage the pocket kitchen, and earn lots of money with your mini chefs! Features smooth animations and engaging cooking mechanics."
   },
   {
-    "id": 5,
+    "id": 7,
     "title": "Screw Mania - Tool Box Jam",
     "category": "Mobile",
     "image": "./assets/images/screw.png",
@@ -112,7 +125,7 @@ const portfolioData = [
     "description": "A puzzle game where players solve tool box jams by strategically moving screws and tools. Features challenging puzzles and satisfying mechanics."
   },
   {
-    "id": 6,
+    "id": 8,
     "title": "Wood Carve",
     "category": "Mobile",
     "image": "./assets/images/wood.png",
@@ -121,7 +134,7 @@ const portfolioData = [
     "description": "Wood Carving Creative Artwork - An ornamental objects carving concept where you can craft beautiful wooden artwork. Features realistic physics for woodcarving and thousands of levels from simple designs to complex timber artifacts."
   },
   {
-    "id": 7,
+    "id": 9,
     "title": "Incognito Popstar",
     "category": "Mobile",
     "image": "./assets/images/popstar.png",
@@ -130,7 +143,7 @@ const portfolioData = [
     "description": "Will they recognize you? Get to your car without getting caught by your fans! Change your clothes and try not to be recognized while fulfilling Popstar's wishes."
   },
   {
-    "id": 8,
+    "id": 10,
     "title": "Blobby Rush",
     "category": "Mobile",
     "image": "./assets/images/blobly.png",
@@ -139,7 +152,7 @@ const portfolioData = [
     "description": "Created realistic Jelly simulation for the Blobby Rush game with advanced physics and fluid dynamics. Features unique blob mechanics and smooth animations."
   },
   {
-    "id": 9,
+    "id": 11,
     "title": "Pearl Rush",
     "category": "Mobile",
     "image": "./assets/images/pearl.png",
@@ -148,7 +161,7 @@ const portfolioData = [
     "description": "Exciting pearl collection game with beautiful underwater graphics and engaging gameplay mechanics. Features smooth controls and challenging levels."
   },
   {
-    "id": 10,
+    "id": 11,
     "title": "Stuffed Toy 3D",
     "category": "Mobile",
     "image": "./assets/images/stuffed.png",
@@ -157,7 +170,7 @@ const portfolioData = [
     "description": "3D stuffed toy simulation game with realistic physics and engaging gameplay. Features beautiful graphics and satisfying toy interactions."
   },
   {
-    "id": 11,
+    "id": 13,
     "title": "Idle Home Makeover",
     "category": "Mobile",
     "image": "./assets/images/home.png",
@@ -166,7 +179,7 @@ const portfolioData = [
     "description": "Idle home renovation game where players transform houses with beautiful makeovers. Features progression systems and satisfying renovation mechanics."
   },
   {
-    "id": 12,
+    "id": 14,
     "title": "Dragon Match 3D",
     "category": "Mobile",
     "image": "./assets/images/dragon.png",
@@ -175,7 +188,7 @@ const portfolioData = [
     "description": "3D matching puzzle game with dragon-themed graphics and engaging gameplay mechanics. Features stunning visuals and challenging levels."
   },
   {
-    "id": 13,
+    "id": 15,
     "title": "Town Demolish",
     "category": "Mobile",
     "image": "./assets/images/town.png",
@@ -193,7 +206,7 @@ const portfolioData = [
     "description": "Built a custom LLM pipeline from scratch, covering data preparation, training workflow, evaluation, and integration into real-world tooling—focused on controllability, latency, and product-ready deployment."
   },
   {
-    "id": 14,
+    "id": 16,
     "title": "Sentiment-Driven NPC Interaction System",
     "category": "AI/ML",
     "image": "./assets/images/npc.png",
@@ -201,7 +214,7 @@ const portfolioData = [
     "description": `<b>Developed a dynamic NPC interaction system for a Unity-based game, enhancing immersion through voice-driven, emotionally intelligent NPCs.</b><br><ul><li><b>Emotionally Responsive NPCs:</b> NPCs analyze player dialogue sentiment and adapt their behavior (friendly, angry, neutral), triggering quests, clues, or challenges.</li><li><b>Voice Integration:</b> NPCs speak directly to the player using speech synthesis, making interactions more natural and immersive.</li><li><b>Dynamic Quest System:</b> NPCs offer quests based on the emotional tone of conversations, such as guiding players to treasures or solving puzzles.</li><li><b>Replayability:</b> Player reputation affects future NPC responses, enabling multiple outcomes based on prior choices.</li><li><b>Technologies:</b> Unity3D, Python (NLP & RL), Text-to-Speech (Speech Synthesis), Unity NavMesh.</li></ul>`
   },
   {
-    "id": 15,
+    "id": 17,
     "title": "AI Agent for University Application Assessment",
     "category": "AI/ML",
     "image": "./assets/images/grade.png",
@@ -209,7 +222,7 @@ const portfolioData = [
     "description": `<b>Build an AI agent for automating the initial assessment of university applications.</b><br><ul><li>Developed a rule-based and ML-powered agent to classify applications as Unqualified, Conditional, or Unconditional based on historical data and admission criteria.</li><li>Integrated evaluation of personal statements using lightweight NLP models to assess "genuine student" intent.</li><li>Implemented and tested the solution in Databricks; built a dashboard for admissions teams to review and interpret decisions.</li><li>Delivered a scalable, fair, and energy-efficient system that significantly reduced manual workload and processing time.</li></ul>`
   },
   {
-    "id": 16,
+    "id": 18,
     "title": "Interactive Crime Data Visualization (Python)",
     "category": "AI/ML",
     "image": "./assets/images/visualisation.png",
@@ -217,7 +230,7 @@ const portfolioData = [
     "description": `<b>Developed an interactive dashboard to analyze Los Angeles crime data (2020–2024) using Python.</b><br><ul><li>Used Pandas, Plotly, and Dash to explore trends by time, location, and demographics.</li><li>Identified high-risk regions, highlighting the impact of HIV co-infection on TB spread.</li><li>Focused on data storytelling to support public safety insights for policymakers, journalists, and law enforcement.</li></ul>`
   },
   {
-    "id": 17,
+    "id": 19,
     "title": "Global Tuberculosis (TB) Burden Analysis (Tableau)",
     "category": "AI/ML",
     "image": "./assets/images/tb.png",
@@ -225,7 +238,7 @@ const portfolioData = [
     "description": `<b>Designed an interactive Tableau dashboard to analyze global TB trends, regional disparities, and healthcare gaps.</b><br><ul><li>Visualized TB incidence, mortality rates, and case detection variations across countries.</li><li>Built geospatial heatmaps and time-series charts for identifying crime hotspots and victim patterns.</li><li>Provided data-driven recommendations to support public health interventions and policy decisions.</li></ul>`
   },
   {
-    "id": 18,
+    "id": 20,
     "title": "Data Mining for Phishing Detection & Student Dropout Prediction",
     "category": "AI/ML",
     "image": "./assets/images/mining.png",
@@ -233,7 +246,7 @@ const portfolioData = [
     "description": `<b>Explored real-world applications of data mining using two datasets: phishing website detection and student dropout prediction.</b><br><ul><li>Applied algorithms like Random Forest, Decision Trees, and SVM to classify phishing websites and predict academic outcomes.</li><li>Analyzed key features influencing student success, identifying academic performance as the strongest predictor of retention.</li><li>Demonstrated how machine learning can support cybersecurity and educational interventions through data-driven insights.</li></ul>`
   },
   {
-    "id": 19,
+    "id": 21,
     "title": "Scary Teacher 3D",
     "category": "AAA Titles",
     "image": "./assets/images/teacher.png",
@@ -247,7 +260,7 @@ const portfolioData = [
     "description": "Steam-based 3D adventure game featuring interactive gameplay with a unique teacher character and immersive environments."
   },
   {
-    "id": 20,
+    "id":22,
     "title": "Amelie And The Lost Spirit",
     "category": "AAA Titles",
     "image": "./assets/images/amilia.jpg",
@@ -260,7 +273,7 @@ const portfolioData = [
     "description": "Steam adventure game with captivating storytelling and exploration mechanics in a mystical world."
   },
   {
-    "id": 21,
+    "id": 23,
     "title": "Real Highway Car Racing Game",
     "category": "AAA Titles",
     "image": "./assets/images/car.png",
@@ -269,7 +282,7 @@ const portfolioData = [
     "description": "High-speed car racing game with luxury cars, multiple game modes, and stunning 3D environments. Features traffic rush, challenges, time trials, and police chase modes."
   },
   {
-    "id": 22,
+    "id": 24,
     "title": "Sniper Shooter Mission Games",
     "category": "AAA Titles",
     "image": "./assets/images/sniper.png",
@@ -278,7 +291,7 @@ const portfolioData = [
     "description": "Sniper shooting mission game with precision targeting mechanics and challenging mission-based gameplay."
   },
   {
-    "id": 23,
+    "id": 25,
     "title": "Kung Fu Karate Boxing Games 3D",
     "category": "AAA Titles",
     "image": "./assets/images/krate.png",
@@ -287,7 +300,7 @@ const portfolioData = [
     "description": "Epic kung fu fighting game with 17 skilled fighters, 12 diverse zones, and PVP battles. Features unique abilities, dynamic weather conditions, and intense martial arts combat mechanics."
   },
   {
-    "id": 24,
+    "id": 26,
     "title": "FPS Shooting Games - Gun Game",
     "category": "AAA Titles",
     "image": "./assets/images/fpsShooter.png",
@@ -297,7 +310,7 @@ const portfolioData = [
   },
   
   {
-    "id": 25,
+    "id": 27,
     "title": "Bike Stunt Game: Tricks Master",
     "category": "AAA Titles",
     "image": "./assets/images/bike.png",
@@ -306,7 +319,7 @@ const portfolioData = [
     "description": "Award-winning bike stunt game with 250+ million downloads. Features freeride quests, light trigger modes, party fun, and multiplayer challenges with stunning visuals."
   },
   {
-    "id": 26,
+    "id": 28,
     "title": "Mini Car Racing Game",
     "category": "AAA Titles",
     "image": "./assets/images/minicar.png",
@@ -316,7 +329,7 @@ const portfolioData = [
   },
 
   {
-    "id": 27,
+    "id": 29,
     "title": "Scary Teacher",
     "category": "Videos",
     "type": "video",
@@ -325,7 +338,7 @@ const portfolioData = [
     "description": "Gameplay showcase of the Scary Teacher 3D adventure game with interactive mechanics and immersive environments."
   },
   {
-    "id": 28,
+    "id": 23,
     "title": "Amelie & The Lost Spirit",
     "category": "Videos",
     "type": "video",
@@ -334,7 +347,7 @@ const portfolioData = [
     "description": "Mystical adventure gameplay featuring Amelie's journey through captivating storytelling and exploration mechanics."
   },
   {
-    "id": 29,
+    "id": 31,
     "title": "Phantom Ascension",
     "category": "Videos",
     "type": "video",
@@ -343,7 +356,7 @@ const portfolioData = [
     "description": "Thrilling gameplay demonstration of Phantom Ascension with stunning visuals and engaging mechanics."
   },
   {
-    "id": 30,
+    "id": 32,
     "title": "Racing Ferocity",
     "category": "Videos",
     "type": "video",
@@ -352,7 +365,7 @@ const portfolioData = [
     "description": "High-speed racing action showcasing the Real Highway Car Racing Game with luxury cars and multiple game modes."
   },
   {
-    "id": 31,
+    "id": 33,
     "title": "Street's Rebel",
     "category": "Videos",
     "type": "video",
@@ -361,7 +374,7 @@ const portfolioData = [
     "description": "Urban street racing and stunt gameplay featuring dynamic environments and challenging missions."
   },
   {
-    "id": 32,
+    "id": 34,
     "title": "Karate Legends",
     "category": "Videos",
     "type": "video",
@@ -535,24 +548,90 @@ function setupVideoBehavior(container) {
     }
   });
   
-  // Mobile video button
+  // Video button - open full-screen modal
   videoButtons.forEach(btn => {
     btn.addEventListener('click', (e) => {
       e.preventDefault();
+      e.stopPropagation();
+      const videoSrc = btn.getAttribute('data-video-src');
       const projectId = btn.getAttribute('data-project-id');
       const card = container.querySelector(`[data-project-id="${projectId}"]`);
-      const video = card?.querySelector('video');
+      const projectTitle = card?.querySelector('h3')?.textContent || 'Project Video';
       
-      if (video) {
-        if (video.paused) {
-          video.play().catch(() => {});
-        } else {
-          video.pause();
-          video.currentTime = 0;
-        }
+      if (videoSrc) {
+        openVideoModal(videoSrc, projectTitle);
       }
     });
   });
+}
+
+// Video Modal Functions
+let currentEscapeHandler = null;
+
+function openVideoModal(videoSrc, title) {
+  const modal = document.getElementById('video-modal');
+  const modalVideo = document.getElementById('video-modal-player');
+  const modalSource = document.getElementById('video-modal-source');
+  const modalTitle = document.getElementById('video-modal-title');
+  const closeBtn = document.getElementById('video-modal-close');
+  
+  if (!modal || !modalVideo || !modalSource) return;
+  
+  // Remove previous escape handler if exists
+  if (currentEscapeHandler) {
+    document.removeEventListener('keydown', currentEscapeHandler);
+  }
+  
+  // Set video source and title
+  modalSource.src = videoSrc;
+  modalVideo.load(); // Reload video with new source
+  modalTitle.textContent = title;
+  
+  // Show modal
+  modal.classList.remove('hidden');
+  modal.classList.add('flex');
+  document.body.style.overflow = 'hidden'; // Prevent background scrolling
+  
+  // Play video
+  modalVideo.play().catch(err => {
+    console.log('Video autoplay failed:', err);
+  });
+  
+  // Close modal function
+  const closeModal = () => {
+    modalVideo.pause();
+    modalVideo.currentTime = 0;
+    modal.classList.add('hidden');
+    modal.classList.remove('flex');
+    document.body.style.overflow = ''; // Restore scrolling
+    
+    // Remove escape handler
+    if (currentEscapeHandler) {
+      document.removeEventListener('keydown', currentEscapeHandler);
+      currentEscapeHandler = null;
+    }
+  };
+  
+  // Close button handler
+  closeBtn.onclick = closeModal;
+  
+  // Close on overlay click (but not on video or content click)
+  const overlayClickHandler = (e) => {
+    // Only close if clicking directly on the modal background container
+    if (e.target === modal) {
+      closeModal();
+      modal.removeEventListener('click', overlayClickHandler);
+    }
+  };
+  modal.addEventListener('click', overlayClickHandler);
+  
+  // Close on Escape key
+  currentEscapeHandler = (e) => {
+    if (e.key === 'Escape') {
+      closeModal();
+    }
+  };
+  document.addEventListener('keydown', currentEscapeHandler);
 }
 
 // Setup slider navigation
