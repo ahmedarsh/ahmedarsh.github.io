@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <link rel="icon" type="image/svg+xml" href="./favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Aerotalon: Smart Weather and Route Optimisation</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -11,11 +11,50 @@
       href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
       rel="stylesheet"
     />
-    <script type="module" crossorigin src="/AeroTalon/assets/index-BaqeCIDo.js"></script>
+    <style>html,body,#root{color:#e8eef8;background:#0b1220;height:100%;margin:0}#boot-fallback{box-sizing:border-box;justify-content:center;align-items:center;min-height:100vh;padding:24px;font-family:system-ui,sans-serif;display:none}#boot-fallback.show{display:flex}#boot-fallback a{color:#2dd4bf}</style>
+    <script type="module" crossorigin src="/AeroTalon/assets/index-C_S0t9gV.js"></script>
     <link rel="modulepreload" crossorigin href="/AeroTalon/assets/rolldown-runtime-XKyaHtl9.js">
-    <link rel="stylesheet" crossorigin href="/AeroTalon/assets/index-BOSCdXH0.css">
+    <link rel="stylesheet" crossorigin href="/AeroTalon/assets/index-DaCakKUg.css">
   </head>
   <body>
     <div id="root"></div>
+    <div id="boot-fallback" role="alert">
+      <div style="max-width: 480px">
+        <p style="font-size: 12px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: #2dd4bf">
+          Aerotalon
+        </p>
+        <h1 style="font-size: 22px; margin: 8px 0 12px">Page did not start</h1>
+        <p id="boot-fallback-msg" style="color: #8b9bb8; line-height: 1.5">
+          This usually means the browser is too old, the link case is wrong, or a script was
+          blocked. Use the exact URL
+          <a href="https://ahmedarshad.me/AeroTalon/">https://ahmedarshad.me/AeroTalon/</a>
+          (capital A and trailing slash), then update Chrome or Edge and hard-refresh.
+        </p>
+      </div>
+    </div>
+    <script>
+      window.addEventListener('error', function (ev) {
+        var el = document.getElementById('boot-fallback')
+        var msg = document.getElementById('boot-fallback-msg')
+        if (!el) return
+        if (msg && ev && ev.message) {
+          msg.textContent =
+            'Load error: ' +
+            ev.message +
+            '. Use https://ahmedarshad.me/AeroTalon/ (capital A), update Chrome or Edge, and hard-refresh.'
+        }
+        el.classList.add('show')
+      })
+      window.addEventListener('unhandledrejection', function () {
+        var el = document.getElementById('boot-fallback')
+        if (el) el.classList.add('show')
+      })
+      // If the app never mounts, show help after a few seconds
+      setTimeout(function () {
+        var root = document.getElementById('root')
+        var el = document.getElementById('boot-fallback')
+        if (root && el && !root.hasChildNodes()) el.classList.add('show')
+      }, 4000)
+    </script>
   </body>
 </html>
