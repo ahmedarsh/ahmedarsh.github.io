@@ -1,0 +1,178 @@
+{
+  "schema": "manifest/v0",
+  "flightNumber": "AH5052PE",
+  "date": "2026-11-19",
+  "aircraftType": "kingair350",
+  "sectors": [
+    {
+      "from": {
+        "icao": "YPJT",
+        "name": "Jandakot",
+        "lat": -32.0975,
+        "lng": 115.8811
+      },
+      "to": {
+        "icao": "YGEL",
+        "name": "Geraldton",
+        "lat": -28.7961,
+        "lng": 114.7075
+      },
+      "etdLocal": "07:40 WST",
+      "fuelUpliftKg": 980,
+      "taxiFuelKg": 25
+    },
+    {
+      "from": {
+        "icao": "YGEL",
+        "name": "Geraldton",
+        "lat": -28.7961,
+        "lng": 114.7075
+      },
+      "to": {
+        "icao": "YUSL",
+        "name": "Useless Loop",
+        "lat": -26.1639,
+        "lng": 113.4019
+      },
+      "etdLocal": "09:35 WST",
+      "fuelUpliftKg": 115,
+      "taxiFuelKg": 20
+    },
+    {
+      "from": {
+        "icao": "YUSL",
+        "name": "Useless Loop",
+        "lat": -26.1639,
+        "lng": 113.4019
+      },
+      "to": {
+        "icao": "YPJT",
+        "name": "Jandakot",
+        "lat": -32.0975,
+        "lng": 115.8811
+      },
+      "etdLocal": "14:10 WST",
+      "fuelUpliftKg": 300,
+      "taxiFuelKg": 25
+    }
+  ],
+  "crew": {
+    "picName": "Capt. A. Brooks",
+    "picWeightKg": 82,
+    "sicName": "FO L. Hart",
+    "sicWeightKg": 74
+  },
+  "passengers": [
+    {
+      "name": "Elena Marsh",
+      "weightKg": 72,
+      "seat": "1L",
+      "sectors": [
+        1,
+        2
+      ],
+      "fareType": "Charter",
+      "idStatus": "Verified",
+      "bookingRef": "ATL-4412",
+      "dietaryNote": "None",
+      "pickup": "Jandakot FBO"
+    },
+    {
+      "name": "Tom Nguyen",
+      "weightKg": 84,
+      "seat": "1R",
+      "sectors": [
+        1,
+        2,
+        3
+      ],
+      "fareType": "Full",
+      "idStatus": "Verified",
+      "bookingRef": "ATL-4418",
+      "dietaryNote": "Vegetarian",
+      "pickup": "Jandakot FBO"
+    },
+    {
+      "name": "Priya Chand",
+      "weightKg": 61,
+      "seat": "2L",
+      "sectors": [
+        1,
+        2
+      ],
+      "fareType": "Charter",
+      "idStatus": "Missing",
+      "bookingRef": "ATL-4420",
+      "dietaryNote": "None",
+      "pickup": "Perth city hotel"
+    },
+    {
+      "name": "Marcus Reid",
+      "weightKg": 90,
+      "seat": "2R",
+      "sectors": [
+        2,
+        3
+      ],
+      "fareType": "Staff",
+      "idStatus": "Verified",
+      "bookingRef": "ATL-STAFF-09",
+      "dietaryNote": "None",
+      "pickup": "Geraldton terminal"
+    },
+    {
+      "name": "Sofia Alvarez",
+      "weightKg": 58,
+      "seat": "3L",
+      "sectors": [
+        1
+      ],
+      "fareType": "Full",
+      "idStatus": "Pending",
+      "bookingRef": "ATL-4431",
+      "dietaryNote": "Gluten free",
+      "pickup": "Jandakot FBO"
+    },
+    {
+      "name": "James Okonkwo",
+      "weightKg": 95,
+      "seat": "3R",
+      "sectors": [
+        2,
+        3
+      ],
+      "fareType": "Charter",
+      "idStatus": "Verified",
+      "bookingRef": "ATL-4440",
+      "dietaryNote": "None",
+      "pickup": "Geraldton terminal"
+    }
+  ],
+  "freight": [
+    {
+      "description": "Survey equipment case",
+      "weightKg": 48,
+      "compartment": "nose",
+      "dangerousGoods": false,
+      "declarationNote": "",
+      "notes": "Fragile"
+    },
+    {
+      "description": "Spare rotor blades (crate)",
+      "weightKg": 85,
+      "compartment": "aft",
+      "dangerousGoods": false,
+      "declarationNote": "",
+      "notes": "Heavy item"
+    },
+    {
+      "description": "Sample DG item",
+      "weightKg": 12,
+      "compartment": "pod",
+      "dangerousGoods": true,
+      "dgClass": "9",
+      "declarationNote": "Class 9",
+      "notes": "Keep upright"
+    }
+  ]
+}

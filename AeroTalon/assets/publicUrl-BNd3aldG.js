@@ -1,1 +1,0 @@
-function e(e){return`/AeroTalon/${e.replace(/^\//,``)}`}export{e as t};

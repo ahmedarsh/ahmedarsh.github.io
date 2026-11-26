@@ -1,0 +1,7 @@
+name,weight_kg,seat,sectors,fare_type,id_status,booking_ref
+Elena Marsh,72,1L,1;2,Charter,Verified,ATL-4412
+Tom Nguyen,84,1R,1;2;3,Full,Verified,ATL-4418
+Priya Chand,61,2L,1;2,Charter,Missing,ATL-4420
+Marcus Reid,90,2R,2;3,Staff,Verified,ATL-STAFF-09
+Sofia Alvarez,58,3L,1,Full,Pending,ATL-4431
+James Okonkwo,95,3R,2;3,Charter,Verified,ATL-4440
